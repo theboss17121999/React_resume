@@ -60,7 +60,7 @@ function App() {
         image: project2,
         desc: "It is used to track spending record along with ability track spending on any particular items with any given date range.",
         tech: ["React", "Tailwind", "NodeJs"],
-        url :"https://github.com/theboss17121999/Spending_Tracker"
+        url :"https://github.com/theboss17121999/React_resume"
     },
     {
         pro_name: "Spending Tracker",
