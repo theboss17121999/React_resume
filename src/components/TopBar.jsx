@@ -72,10 +72,18 @@ export const NavBar= () =>{
         {isClick && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2">Home</a>
-                <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2">Education</a>
-                <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2">Project</a>
-                <a href="/" className="text-white block hover:bg-white hover:text-black rounded-lg p-2">Skill</a>
+                <Link to="#Home" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
+                  Home
+                </Link>
+                <Link to="#Education" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
+                  Education
+                </Link>
+                <Link to="#Skill" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
+                  Skill
+                </Link>
+                <Link to="#Project" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
+                  Project
+                </Link>
             </div>
           </div>
         )}
