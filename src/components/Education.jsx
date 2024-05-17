@@ -1,40 +1,8 @@
 import { useMediaQuery } from 'react-responsive';
-import KV from '../assets/educationLogo/kendriya-vidyalaya-sangathan.png';
-import DPS from '../assets/educationLogo/DPS.png';
-import CU from '../assets/educationLogo/Cu.png';
 import BG from '../assets/background/BG_education.png';
 
 
-export const Education = () =>{
-    const details = [
-        {
-            school : "Kendriya Vidyalaya",
-            year : "2005-2015",
-            marks: "9.0 cgpa",
-            bg_pic: KV,
-            bg_col: "bg-yellow-500",
-            col_text: "text-red-800",
-            subject: "Class X"
-        },
-        {
-            school : "Delhi Public School",
-            year : "2015-2017",
-            marks: "75%",
-            bg_pic: DPS,
-            bg_col: "bg-emerald-700",
-            col_text: "text-white",
-            subject : "Class XII"
-        },
-        {
-            school : "Chandigarh University",
-            year : "2017-2021",
-            marks: "6.9 cgpa",
-            bg_pic: CU,
-            bg_col: "bg-red-600",
-            col_text: "text-black",
-            subject: "Computer Science Engineering"
-        }
-    ]
+export const Education = ({details}) =>{
 
     const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 

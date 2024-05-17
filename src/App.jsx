@@ -13,6 +13,9 @@ import leetcodeLogo from './assets/socaillogo/leetcode.png';
 import githubLogo from './assets/socaillogo/github.png'; 
 import instagramLogo from './assets/socaillogo/instagram.png'; 
 import facebookLogo from './assets/socaillogo/facebook.png'; 
+import KV from './assets/educationLogo/kendriya-vidyalaya-sangathan.png';
+import DPS from './assets/educationLogo/DPS.png';
+import CU from './assets/educationLogo/Cu.png';
 
 
 function App() {
@@ -109,6 +112,36 @@ function App() {
       },
   ];
 
+  const Edu_details = [
+    {
+        school : "Kendriya Vidyalaya",
+        year : "2005-2015",
+        marks: "9.0 cgpa",
+        bg_pic: KV,
+        bg_col: "bg-yellow-500",
+        col_text: "text-red-800",
+        subject: "Class X"
+    },
+    {
+        school : "Delhi Public School",
+        year : "2015-2017",
+        marks: "75%",
+        bg_pic: DPS,
+        bg_col: "bg-emerald-700",
+        col_text: "text-white",
+        subject : "Class XII"
+    },
+    {
+        school : "Chandigarh University",
+        year : "2017-2021",
+        marks: "6.9 cgpa",
+        bg_pic: CU,
+        bg_col: "bg-red-600",
+        col_text: "text-black",
+        subject: "Computer Science Engineering"
+    }
+  ]; 
+
   return (
     <>
       <BrowserRouter>
@@ -119,7 +152,7 @@ function App() {
           <Intro title={title}></Intro>
         </div>
         <div id="Education" className=''>
-          <Education></Education>
+          <Education details={Edu_details}></Education>
         </div>  
         <div id="Skill" className=''>
           <Skill allskill={allskill}></Skill>
