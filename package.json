@@ -1,5 +1,5 @@
 {
-  "homepage": "https://theboss17121999.github.io/React_resume",
+  "homepage": "https://theboss17121999.github.io/React_resume/",
   "name": "resume",
   "private": true,
   "version": "0.0.0",
@@ -19,7 +19,8 @@
     "react-dom": "^18.2.0",
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.23.1",
-    "react-router-hash-link": "^2.4.3"
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
