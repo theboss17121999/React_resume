@@ -18,7 +18,7 @@ function Social({allHandles}) {
     return (
         <div className="text-white">
             <div className='flex justify-center md:justify-normal'>
-                <div className="text-green font-pixel text-4xl mb-4">SOCIAL</div>
+                <div className="text-green-500 font-pixel text-4xl mb-4">SOCIAL</div>
             </div>
             <div className="grid grid-cols-5 gap-4">
                 {allHandles.map((handle, index) => (

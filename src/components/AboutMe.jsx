@@ -53,12 +53,12 @@ function GetToKnowMe() {
                 <div className="pt-4">
                     <p className="text-base md:text-xl">I’m a <strong className="text-gray-700">Developer</strong> building and managing different projects and applications that leads to the success of overall product. Check out some of my <strong className="text-gray-700">projects</strong> in the project section.</p>
                     <br />
-                    <p className="text-base md:text-xl">I also share some of my personal or <strong className="text-gray-700">professional</strong> achievements over the year. Feel free to connect or Follow me on my <a href="https://www.linkedin.com/in/shabose/" class="text-blue-500 underline hover:text-blue-900"><strong>Linkedin</strong></a> and <a href="https://www.instagram.com/shashwat_1712/" class="text-pink-500 underline hover:text-pink-900"><strong>Instagram</strong></a> where I post my achievements on development and programming.</p>
+                    <p className="text-base md:text-xl">I also share some of my personal or <strong className="text-gray-700">professional</strong> achievements over the year. Feel free to connect or Follow me on my <a href="https://www.linkedin.com/in/shabose/" className="text-blue-500 underline hover:text-blue-900"><strong>Linkedin</strong></a> and <a href="https://www.instagram.com/shashwat_1712/" className="text-pink-500 underline hover:text-pink-900"><strong>Instagram</strong></a> where I post my achievements on development and programming.</p>
                     <br />
                     <p className="text-base md:text-xl">I'm <strong className="text-gray-700">open to Job opportunities</strong> where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
                 </div>
-                <div className="pt-16">
-                    <Link to="#Project" className="bg-purple-500 text-white font-bold py-4 px-16 rounded-lg text-xl" smooth>
+                <div className="pt-16 flex justify-center md:justify-start">
+                    <Link to="Project" className="bg-purple-500 text-white font-bold py-4 px-16 rounded-lg text-xl" smooth>
                         PROJECT
                     </Link>
                 </div>

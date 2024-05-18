@@ -152,7 +152,7 @@ function App() {
         <div id="Home">
           <Intro title={title}></Intro>
         </div>
-        <div id="AboutMe" className='bg-slate-50'>
+        <div id="AboutMe" className='bg-stone-50'>
           <AboutMe></AboutMe>
         </div>
         <div id="Education" className=''>
