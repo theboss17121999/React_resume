@@ -6,6 +6,7 @@ import {Education} from './components/Education'
 import {Project} from './components/Project'
 import {NavBar} from './components/TopBar'
 import {BrowserRouter} from "react-router-dom"
+import {AboutMe} from './components/AboutMe'
 import project1 from './assets/project/LapPro1.png';
 import project2 from './assets/project/LapPro2.png';
 import linkedinLogo from './assets/socaillogo/Linkedin.png'; 
@@ -151,12 +152,15 @@ function App() {
         <div id="Home">
           <Intro title={title}></Intro>
         </div>
+        <div id="AboutMe" className='bg-slate-50'>
+          <AboutMe></AboutMe>
+        </div>
         <div id="Education" className=''>
           <Education details={Edu_details}></Education>
         </div>  
-        <div id="Skill" className=''>
+        {/* <div id="Skill" className=''>
           <Skill allskill={allskill}></Skill>
-        </div> 
+        </div>  */}
         <div id="Project">
           <Project details={details}></Project>
         </div>

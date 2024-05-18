@@ -24,11 +24,11 @@ export const NavBar= () =>{
                 <Link to="#Home" className="text-lime-400 hover:bg-white hover:text-black rounded-lg p-2 font-pixel text-lg" smooth>
                   Home
                 </Link>
+                <Link to="#AboutMe" className="text-lime-400 hover:bg-white hover:text-black rounded-lg p-2 font-pixel text-lg" smooth>
+                  About Me
+                </Link>
                 <Link to="#Education" className="text-lime-400 hover:bg-white hover:text-black rounded-lg p-2 font-pixel text-lg" smooth>
                   Education
-                </Link>
-                <Link to="#Skill" className="text-lime-400 hover:bg-white hover:text-black rounded-lg p-2 font-pixel text-lg" smooth>
-                  Skill
                 </Link>
                 <Link to="#Project" className="text-lime-400 hover:bg-white hover:text-black rounded-lg p-2 font-pixel text-lg " smooth>
                   Project
@@ -75,11 +75,11 @@ export const NavBar= () =>{
                 <Link to="#Home" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
                   Home
                 </Link>
+                <Link to="#AboutMe" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
+                  About me
+                </Link>
                 <Link to="#Education" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
                   Education
-                </Link>
-                <Link to="#Skill" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
-                  Skill
                 </Link>
                 <Link to="#Project" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
                   Project
