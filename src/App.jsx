@@ -14,9 +14,9 @@ import leetcodeLogo from './assets/socaillogo/leetcode.png';
 import githubLogo from './assets/socaillogo/github.png'; 
 import instagramLogo from './assets/socaillogo/instagram.png'; 
 import facebookLogo from './assets/socaillogo/facebook.png'; 
-import KV from './assets/educationLogo/kendriya-vidyalaya-sangathan.png';
-import DPS from './assets/educationLogo/DPS.png';
-import CU from './assets/educationLogo/Cu.png';
+import KV from './assets/educationLogo/KV.png';
+import DPS from './assets/educationLogo/dps.png';
+import CU from './assets/educationLogo/CU.png';
 
 
 function App() {
@@ -121,7 +121,7 @@ function App() {
         bg_pic: KV,
         bg_col: "bg-yellow-500",
         col_text: "text-red-800",
-        subject: "Class X"
+        detail: "I completed my basic education from class I to X, focusing on Science, Maths, Hindi, Socail Studies and English."
     },
     {
         school : "Delhi Public School",
@@ -130,7 +130,7 @@ function App() {
         bg_pic: DPS,
         bg_col: "bg-emerald-700",
         col_text: "text-white",
-        subject : "Class XII"
+        detail: "I completed my foundational education from class XI to XII, focusing on Physics, Maths, Chemistry, and Computer Science."
     },
     {
         school : "Chandigarh University",
@@ -139,7 +139,11 @@ function App() {
         bg_pic: CU,
         bg_col: "bg-red-600",
         col_text: "text-black",
-        subject: "Computer Science Engineering"
+        detail: (
+          <>
+              I completed my <strong>Bachelor's degree</strong> in Computer Science and other key subjects such as DSA, Programming, etc.
+          </>
+      )
     }
   ]; 
 
