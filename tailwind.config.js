@@ -28,7 +28,6 @@ export default {
       'jersey': ['"Jersey 15"', 'sans-serif'],
       'display': ["Sedgwick Ave Display", 'cursive'],
       'display2': ["Poetsen One", 'sans-serif'],
-      'display3': ["Poetsen One", 'sans-serif'],
       'display4': ["Sedan SC", 'serif'],
       'display5': ["Oswald", 'sans-serif'],
       'display6':["Kanit", 'sans-serif'],

@@ -34,7 +34,7 @@ function Header() {
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center pt-12 w-full sc:w-160 sc:px-4">
-                    <p className="text-lg md:text-xl text-center">Here you will find more information about my educational background, including where I studied and the grades I achieved.</p>
+                    <p className="text-lg md:text-xl text-center">Here you will find more information about my educational background, including where I studied and what I studied.</p>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@ function EduCard({name, year, img, details}){
         <>
             <div className=''>
                 <div className='flex justify-center'>
-                    <img src={img} alt="" className='px-8 w-128'/>
+                    <img src={img} alt="" className='px-20 md:px-8 w-128'/>
                 </div>
                 <div className='flex justify-center pt-8'>
                     <p className='font-display5 text-3xl'>{name}</p>

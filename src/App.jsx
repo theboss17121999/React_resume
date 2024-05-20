@@ -38,27 +38,29 @@ function App() {
       name: "Project",
       link: "#Project"
     },
+    // {
+    //   name: "Contact",
+    //   link: "#Contact"
+    // },
   ]
   const details = [
     {
         pro_name: "Portfolio",
         image: project2,
-        desc: "It is used to track spending record along with ability track spending on any particular items with any given date range.",
-        tech: ["React", "Tailwind", "NodeJs"],
+        desc: "It contains details about individuals such as Education, Project and contact details.",
         url :"https://github.com/theboss17121999/React_resume"
     },
     {
         pro_name: "Spending Tracker",
         image: project1,
         desc: "it is used to track spending record along with ability track spending on any particular items with any given date range.",
-        tech: ["Java", "SQL", "JFrame"],
         url :"https://github.com/theboss17121999/Spending_Tracker"
     },
     // {
     //     pro_name: "Spending Tracker",
     //     image: project1,
     //     desc: "it is used to track spending record along with ability track spending on any particular items with any given date range.",
-    //     tech: ["Java", "SQL", "JFrame"]
+    //     url:""
     // }
     ];
     const allHandles = [
