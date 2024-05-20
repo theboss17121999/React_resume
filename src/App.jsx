@@ -21,42 +21,23 @@ import CU from './assets/educationLogo/CU.png';
 
 function App() {
   const title = "Shashwat Bose";
-  const allskill = [
+  const navbar =[
     {
-        subject: "Java",
-        points : 5,
-        color  :"bg-blue-600"
+      name: "Home",
+      link: "#Home"
     },
     {
-        subject: "Python",
-        points : 4,
-        color  :"bg-blue-800"
+      name: "About Me",
+      link: "#AboutMe"
     },
     {
-        subject: "HTML/CSS",
-        points : 3,
-        color  :"bg-amber-500"
+      name: "Education",
+      link: "#Education"
     },
     {
-        subject: "DSA",
-        points : 4,
-        color  :"bg-cyan-400"
+      name: "Project",
+      link: "#Project"
     },
-    {
-        subject: "JavaScript",
-        points : 5,
-        color  :"bg-yellow-400"
-    },
-    {
-        subject: "React",
-        points : 4,
-        color  :"bg-sky-300"
-    },
-    {
-        subject: "Tailwind",
-        points : 4,
-        color  :"bg-rose-900"
-    }
   ]
   const details = [
     {
@@ -151,7 +132,7 @@ function App() {
     <>
       <BrowserRouter>
         <div  className='sticky top-0 z-50 '>
-          <NavBar></NavBar>
+          <NavBar navbar={navbar}></NavBar>
         </div>
         <div id="Home">
           <Intro title={title}></Intro>

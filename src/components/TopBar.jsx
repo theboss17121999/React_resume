@@ -1,7 +1,7 @@
 import { useState } from "react"
 import {HashLink as Link} from "react-router-hash-link"
 
-export const NavBar= () =>{
+export const NavBar= ({navbar}) =>{
 
   const [isClick, setIsClick] = useState(false);
 
@@ -21,18 +21,11 @@ export const NavBar= () =>{
             </div>
             <div className="hidden md:block">
               <div className="ml-4 flex items-center space-x-4">
-                <Link to="#Home" className="text-lime-400 hover:bg-white hover:text-black rounded-lg p-2 font-pixel text-lg" smooth>
-                  Home
-                </Link>
-                <Link to="#AboutMe" className="text-lime-400 hover:bg-white hover:text-black rounded-lg p-2 font-pixel text-lg" smooth>
-                  About Me
-                </Link>
-                <Link to="#Education" className="text-lime-400 hover:bg-white hover:text-black rounded-lg p-2 font-pixel text-lg" smooth>
-                  Education
-                </Link>
-                <Link to="#Project" className="text-lime-400 hover:bg-white hover:text-black rounded-lg p-2 font-pixel text-lg " smooth>
-                  Project
-                </Link>
+                {navbar.map((navbar, index) => (
+                    <div key={index} className="py-2">
+                        <NavButtons name={navbar.name} link={navbar.link} block={false}/>
+                    </div>
+                ))} 
               </div>
             </div>
             <div className="md:hidden flex items-center">
@@ -72,21 +65,28 @@ export const NavBar= () =>{
         {isClick && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <Link to="#Home" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
-                  Home
-                </Link>
-                <Link to="#AboutMe" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
-                  About me
-                </Link>
-                <Link to="#Education" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
-                  Education
-                </Link>
-                <Link to="#Project" className="text-white block hover:bg-white hover:text-black rounded-lg p-2" smooth>
-                  Project
-                </Link>
+                {navbar.map((navbar, index) => (
+                  <div key={index} className="py-2">
+                      <NavButtons name={navbar.name} link={navbar.link} block={true}/>
+                  </div>
+                ))} 
             </div>
           </div>
         )}
       </nav>
   )
+}
+
+function NavButtons({ name, link, block }) {
+  return (
+    <Link
+      to={link}
+      className={`rounded-lg p-2 ${
+        block ? "text-white block hover:bg-white hover:text-black" : "text-lime-400 hover:bg-white hover:text-black font-pixel text-lg"
+      }`}
+      smooth
+    >
+      {name}
+    </Link>
+  );
 }
