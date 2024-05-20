@@ -47,13 +47,13 @@ function App() {
     {
         pro_name: "Portfolio",
         image: project2,
-        desc: "It contains details about individuals such as Education, Project and contact details.",
+        desc: "It includes information about individuals, such as their education, projects, and contact details, as well as the skills they have acquired over the years.",
         url :"https://github.com/theboss17121999/React_resume"
     },
     {
         pro_name: "Spending Tracker",
         image: project1,
-        desc: "it is used to track spending record along with ability track spending on any particular items with any given date range.",
+        desc: "It is used to track spending record along with ability track spending on any particular items with any given date range.",
         url :"https://github.com/theboss17121999/Spending_Tracker"
     },
     // {

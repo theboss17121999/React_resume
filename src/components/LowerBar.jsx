@@ -16,9 +16,9 @@ export const LowerBar = ({allHandles}) => {
 function Social({allHandles}) {
 
     return (
-        <div className="text-white">
+        <div className="text-white pt-8 md:pt-0">
             <div className='flex justify-center md:justify-normal'>
-                <div className="text-green-500 font-pixel text-4xl mb-4">SOCIAL</div>
+                <div className="text-green-500 font-display2 text-4xl mb-4">SOCIAL</div>
             </div>
             <div className="grid grid-cols-5 gap-4">
                 {allHandles.map((handle, index) => (
@@ -46,7 +46,7 @@ function SocialButton({ Logo, url, tw, alt}) {
 
 function SmallIntro() {
     return (
-        <div className='font-pixel text-white text-lg px-20 md:px-0'>
+        <div className='font-display4 text-white text-lg px-20 md:px-5'>
             <p>I am a highly skilled programmer with expertise in <strong>M.E.R.N.</strong> Stack. 
                 With a passion for solving complex problems and a strong foundation in programming languages, 
                 I strive to create efficient and scalable solutions.</p>
