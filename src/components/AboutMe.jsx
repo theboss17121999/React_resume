@@ -85,7 +85,7 @@ function Skills() {
 
 const StringInBox = ({ text }) => {
     return (
-        <div className="inline-block bg-gray-200 text-gray-600 rounded-lg py-3 px-4 mr-4 mb-4 text-sm md:text-base font-semibold">
+        <div className="inline-block bg-gray-200 text-gray-600 rounded-lg py-3 px-4 mr-4 mb-4 text-sm md:text-base font-semibold hover:bg-purple-500 hover:text-white duration-300">
             {text.trim()}
         </div>
     );

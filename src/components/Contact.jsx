@@ -27,7 +27,7 @@ function LetsTalk() {
                 
                 <div className="text-2xl md:text-5xl text-white pt-8 md:pt-32 flex justify-center sc:justify-start mt-auto">
                     <button onClick={() => window.location = 'mailto:shashwatbose1712@gmail.com'} className="underline underline-offset-8 hover:text-black transition duration-500">
-                        shashwatbose2@gmail.com
+                        shashwatbose1712@gmail.com
                     </button>
                 </div>
             </div>
