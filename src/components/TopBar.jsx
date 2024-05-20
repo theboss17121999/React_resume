@@ -81,8 +81,8 @@ function NavButtons({ name, link, block }) {
   return (
     <Link
       to={link}
-      className={`rounded-lg p-2 ${
-        block ? "text-white block hover:bg-white hover:text-black" : "text-lime-400 hover:bg-white hover:text-black font-pixel text-lg"
+      className={`rounded-lg p-2 font-display2 ${
+        block ? "text-white block hover:bg-white hover:text-black" : "text-lime-400 hover:bg-white hover:text-black text-lg"
       }`}
       smooth
     >

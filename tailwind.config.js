@@ -23,6 +23,13 @@ export default {
       screens: {
         'sc': '1280px',
       },
+      fontSize: {
+        extralarge: '19rem',
+        scextralarge: '12rem',
+      },
+      textUnderlineOffset: {
+        19: '19px',
+      }
     },
     fontFamily: {
       'jersey': ['"Jersey 15"', 'sans-serif'],

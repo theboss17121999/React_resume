@@ -7,6 +7,7 @@ import {Project} from './components/Project'
 import {NavBar} from './components/TopBar'
 import {BrowserRouter} from "react-router-dom"
 import {AboutMe} from './components/AboutMe'
+import {Contact} from './components/Contact'
 import project1 from './assets/project/LapPro1.png';
 import project2 from './assets/project/LapPro2.png';
 import linkedinLogo from './assets/socaillogo/Linkedin.png'; 
@@ -38,10 +39,10 @@ function App() {
       name: "Project",
       link: "#Project"
     },
-    // {
-    //   name: "Contact",
-    //   link: "#Contact"
-    // },
+    {
+      name: "Contact",
+      link: "#Contact"
+    },
   ]
   const details = [
     {
@@ -151,7 +152,9 @@ function App() {
         <div id="Project">
           <Project details={details}></Project>
         </div>
-         
+        <div id="Contact">
+          <Contact />
+        </div>
         <div className=''>
           <div className='py-20 md:py-40 px:20 bg-black'>
             <LowerBar allHandles={allHandles}></LowerBar>
