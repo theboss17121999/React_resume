@@ -1,12 +1,13 @@
 import C1 from '../assets/Intro/Cloud1.jpg';
 import C2 from '../assets/Intro/cloud2.jpg';
 import P1 from '../assets/Intro/pond.jpg';
+import sv1 from '../assets/background/tiles1.svg'
 import {HashLink as Link} from "react-router-hash-link"
 
 
 export const Intro = ({ title }) => {
     return (
-        <div className="relative h-screen bg-cover bg-center" style={{backgroundImage: `url(${C1})`, overflow: 'hidden'}}>
+        <div className="relative h-screen bg-cover bg-center" style={{backgroundImage: `url(${sv1})`, overflow: 'hidden'}}>
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                 <div className="font-display2 text-4xl text-black mb-4">Hi, My name is</div>
