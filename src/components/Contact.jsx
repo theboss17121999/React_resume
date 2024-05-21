@@ -14,7 +14,7 @@ export const Contact = () => {
 
 function LetsTalk() {
     return (
-        <div className="flex justify-center w-full py-20 sc:px-10">
+        <div className="flex justify-center w-full py-20 sc:px-10 h-full">
             <div className="w-full sc:w-170 flex flex-col justify-between h-full">
                 <div>
                     <div className="text-7xl md:text-scextralarge sc:text-extralarge text-white pt-4 md:pt-32 flex justify-center sc:justify-start">
