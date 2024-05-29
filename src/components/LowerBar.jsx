@@ -1,4 +1,7 @@
-export const LowerBar = ({allHandles}) => {
+import {AllHandles} from '../contextProvider/AllHandlesProvider.jsx'
+
+
+export const LowerBar = () => {
     return (
         <div className='bg-black '>
             <div className='container mx-auto grid grid-cols-1 md:grid-cols-2'>
@@ -6,43 +9,28 @@ export const LowerBar = ({allHandles}) => {
                     <SmallIntro />
                 </div>
                 <div className='flex justify-center items-center px-10 md:px-1'>
-                    <Social allHandles={allHandles}/>
+                    <Social/>
                 </div>
             </div>
         </div>
     );
 };
 
-function Social({allHandles}) {
+function Social() {
 
     return (
         <div className="text-white pt-8 md:pt-0">
             <div className='flex justify-center md:justify-normal'>
                 <div className="text-green-500 font-display2 text-4xl mb-4">SOCIAL</div>
             </div>
-            <div className="grid grid-cols-5 gap-4">
-                {allHandles.map((handle, index) => (
-                    <div key={index}>
-                        <SocialButton Logo={handle.logo} url={handle.url} tw={handle.tw} alt={handle.alt} />
-                    </div>
-                ))}
+            <div className=''>
+                <AllHandles />
             </div>
         </div>
     );
 }
 
-function SocialButton({ Logo, url, tw, alt}) {
-    const openInNewTab = (url) => {
-        window.open(url, "_blank", "noreferrer");
-    };
-    return (
-        <div className={tw}>
-            <button className="focus:outline-none" onClick={() => openInNewTab(url)}>
-                <img src={Logo} alt={alt} className="w-7 h-7" />
-            </button>
-        </div>
-    );
-}
+
 
 function SmallIntro() {
     return (
