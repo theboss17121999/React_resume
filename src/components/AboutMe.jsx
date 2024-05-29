@@ -1,4 +1,6 @@
 import {HashLink as Link} from "react-router-hash-link"
+import {SkillContext} from '../context/SkillContext.js'
+import { useContext } from "react";
 
 
 export const AboutMe = () => {
@@ -38,7 +40,9 @@ function AboutMeDetails() {
                     <GetToKnowMe />
                 </div>
                 <div>
-                    <Skills />
+                    <SkillContext.Provider value={["Mongo DB", "Express", "React", "NodeJs", "Tailwind", "Java", "Python", "HTML", "CSS", "SQL", "Terminal", "Responsive Design", "GIT", "GitHub", "PostMan", "Problem Solving","Data Structure and Algorithm"]}>
+                        <Skills />
+                    </SkillContext.Provider>
                 </div>
             </div>
         </div>
@@ -68,7 +72,7 @@ function GetToKnowMe() {
 }
 
 function Skills() {
-    const tech=["Mongo DB", "Express", "React", "NodeJs", "Tailwind", "Java", "Python", "HTML", "CSS", "SQL", "Terminal", "Responsive Design", "GIT", "GitHub", "PostMan", "Problem Solving","Data Structure and Algorithm"];
+    const tech= useContext(SkillContext);
     return (
         <div className="px-4 md:px-0">
             <div>

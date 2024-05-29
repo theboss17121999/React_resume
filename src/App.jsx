@@ -5,7 +5,7 @@ import {Skill} from './components/Skill'
 import {Education} from './components/Education'
 import {Project} from './components/Project'
 import {NavBar} from './components/TopBar'
-import {BrowserRouter} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {AboutMe} from './components/AboutMe'
 import {Contact} from './components/Contact'
 import project1 from './assets/project/LapPro1.png';
@@ -133,10 +133,14 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/React_resume/">
         <div  className='sticky top-0 z-50 '>
           <NavBar navbar={navbar}></NavBar>
         </div>
+        {/* <Routes> 
+          <Route path='/education' element={<Education details={Edu_details}></Education>} />
+          <Route path='/' element={<Project details={details}></Project>} />
+        </Routes> */}
         <div id="Home">
           <Intro title={title}></Intro>
         </div>
