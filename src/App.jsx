@@ -11,36 +11,12 @@ import { EducationDetails } from './contextProvider/EducationContextProvider'
 
 function App() {
   const title = "Shashwat Bose";
-  const navbar =[
-    {
-      name: "Home",
-      link: "#Home"
-    },
-    {
-      name: "About Me",
-      link: "#AboutMe"
-    },
-    {
-      name: "Education",
-      link: "#Education"
-    },
-    {
-      name: "Project",
-      link: "#Project"
-    },
-    {
-      name: "Contact",
-      link: "#Contact"
-    },
-  ]
   
-
-
   return (
     <>
       <BrowserRouter basename="/React_resume/">
         <div  className='sticky top-0 z-50 '>
-          <NavBar navbar={navbar}></NavBar>
+          <NavBar></NavBar>
         </div>
         {/* <Routes> 
           <Route path='/education' element={<Education details={Edu_details}></Education>} />

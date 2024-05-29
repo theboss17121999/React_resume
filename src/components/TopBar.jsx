@@ -1,7 +1,30 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import {HashLink as Link} from "react-router-hash-link"
+import { NavBarContext } from "../context/NavBarContext";
 
-export const NavBar= ({navbar}) =>{
+export const NavBar= () =>{
+  const navbar =[
+    {
+      name: "Home",
+      link: "#Home"
+    },
+    {
+      name: "About Me",
+      link: "#AboutMe"
+    },
+    {
+      name: "Education",
+      link: "#Education"
+    },
+    {
+      name: "Project",
+      link: "#Project"
+    },
+    {
+      name: "Contact",
+      link: "#Contact"
+    },
+  ]
 
   const [isClick, setIsClick] = useState(false);
 
@@ -23,7 +46,9 @@ export const NavBar= ({navbar}) =>{
               <div className="ml-4 flex items-center space-x-4">
                 {navbar.map((navbar, index) => (
                     <div key={index} className="py-2">
-                        <NavButtons name={navbar.name} link={navbar.link} block={false}/>
+                      <NavBarContext.Provider value={navbar}>
+                        <NavButtons  block={false}/>
+                      </NavBarContext.Provider>
                     </div>
                 ))} 
               </div>
@@ -67,7 +92,9 @@ export const NavBar= ({navbar}) =>{
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 {navbar.map((navbar, index) => (
                   <div key={index} className="py-2">
-                      <NavButtons name={navbar.name} link={navbar.link} block={true}/>
+                      <NavBarContext.Provider value={navbar}>
+                        <NavButtons  block={true}/>
+                      </NavBarContext.Provider>
                   </div>
                 ))} 
             </div>
@@ -77,7 +104,9 @@ export const NavBar= ({navbar}) =>{
   )
 }
 
-function NavButtons({ name, link, block }) {
+function NavButtons({block }) {
+  const name = useContext(NavBarContext).name;
+  const link = useContext(NavBarContext).link;
   return (
     <Link
       to={link}
