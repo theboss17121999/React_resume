@@ -19,6 +19,7 @@ import facebookLogo from './assets/socaillogo/facebook.png';
 import KV from './assets/educationLogo/KV.png';
 import DPS from './assets/educationLogo/dps.png';
 import CU from './assets/educationLogo/CU.png';
+import { EducationDetails } from './contextProvider/EducationContextProvider'
 
 
 function App() {
@@ -78,40 +79,6 @@ function App() {
       },
   ];
 
-  const Edu_details = [
-    {
-        school : "Kendriya Vidyalaya",
-        year : "2005-2015",
-        marks: "9.0 cgpa",
-        bg_pic: KV,
-        bg_col: "bg-yellow-500",
-        col_text: "text-red-800",
-        detail: "I completed my basic education from class I to X, focusing on Science, Maths, Hindi, Socail Studies and English."
-    },
-    {
-        school : "Delhi Public School",
-        year : "2015-2017",
-        marks: "75%",
-        bg_pic: DPS,
-        bg_col: "bg-emerald-700",
-        col_text: "text-white",
-        detail: "I completed my foundational education from class XI to XII, focusing on Physics, Maths, Chemistry, and Computer Science."
-    },
-    {
-        school : "Chandigarh University",
-        year : "2017-2021",
-        marks: "6.9 cgpa",
-        bg_pic: CU,
-        bg_col: "bg-red-600",
-        col_text: "text-black",
-        detail: (
-          <>
-              I completed my <strong>Bachelor's degree</strong> in Computer Science and other key subjects such as DSA, Programming, etc.
-          </>
-      )
-    }
-  ]; 
-
   return (
     <>
       <BrowserRouter basename="/React_resume/">
@@ -129,7 +96,7 @@ function App() {
           <AboutMe></AboutMe>
         </div>
         <div id="Education" className=''>
-          <Education details={Edu_details}></Education>
+          <EducationDetails />
         </div>  
         <div id="Project">
           <ProjectDetails />
