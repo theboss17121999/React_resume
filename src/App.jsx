@@ -8,6 +8,7 @@ import {NavBar} from './components/TopBar'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {AboutMe} from './components/AboutMe'
 import {Contact} from './components/Contact'
+import {ProjectDetails} from './contextProvider/ProjectContextProvider'
 import project1 from './assets/project/LapPro1.png';
 import project2 from './assets/project/LapPro2.png';
 import linkedinLogo from './assets/socaillogo/Linkedin.png'; 
@@ -44,26 +45,6 @@ function App() {
       link: "#Contact"
     },
   ]
-  const details = [
-    {
-        pro_name: "Portfolio",
-        image: project2,
-        desc: "It includes information about individuals, such as their education, projects, and contact details, as well as the skills they have acquired over the years.",
-        url :"https://github.com/theboss17121999/React_resume"
-    },
-    {
-        pro_name: "Spending Tracker",
-        image: project1,
-        desc: "It is used to track spending record along with ability track spending on any particular items with any given date range.",
-        url :"https://github.com/theboss17121999/Spending_Tracker"
-    },
-    // {
-    //     pro_name: "Spending Tracker",
-    //     image: project1,
-    //     desc: "it is used to track spending record along with ability track spending on any particular items with any given date range.",
-    //     url:""
-    // }
-    ];
     const allHandles = [
       {
           logo: linkedinLogo,
@@ -150,11 +131,8 @@ function App() {
         <div id="Education" className=''>
           <Education details={Edu_details}></Education>
         </div>  
-        {/* <div id="Skill" className=''>
-          <Skill allskill={allskill}></Skill>
-        </div>  */}
         <div id="Project">
-          <Project details={details}></Project>
+          <ProjectDetails />
         </div>
         <div id="Contact">
           <Contact />

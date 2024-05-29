@@ -1,58 +1,42 @@
+import { useContext } from 'react';
 import T1 from '../assets/background/tiles1.svg';
 import project1 from '../assets/project/LapPro1.png';
+import { ProjectContext } from '../context/ProjextContext';
 
 
-export const Project = ({details}) => {
+export const Project = () => {
+
     
     return (
-        <div className="bg-gray-100 flex justify-center py-24 w-full">
-            <div className="w-full sc:w-170">
-                <Header />
-                {details.map((details, index) => (
-                    <div key={index} className="py-2">
-                        <Projects details={details}/>
-                    </div>
-                ))} 
+        <div className="">
+            <div className="">
+                <Projects />
             </div>
         </div>
     );
 };
 
+function Projects(){
 
-function Header() {
-    return (
-        <div className="flex flex-col justify-center items-center px-4 md:px-0">
-            <div>
-                <div className="flex flex-col justify-center items-center">
-                    <p className="text-3xl md:text-5xl font-display2">Projects</p>
-                    <div className="pt-3">
-                        <div className="bg-gree w-8 h-1 mt-2 rounded-full"></div>
-                    </div>
-                </div>
-                <div className="flex flex-col justify-center items-center pt-12 w-full sc:w-160 sc:px-4">
-                    <p className="text-lg md:text-xl text-center">Here you will find more information about my educational background, including where I studied and the grades I achieved.</p>
-                </div>
-            </div>
-        </div>
-    );
-}
 
-function Projects({details}){
     return (
         <div className="pt-8 md:pt-32 px-4 sc:px-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div>
-                    <ProjectImage img={details.image}  />
+                    <ProjectImage />
                 </div>
                 <div className='content-center'>
-                    <ProjectDetails name={details.pro_name} link={details.url} desc={details.desc}/>
+                    <ProjectDetails />
                 </div>
             </div>
         </div>
     );
 }
 
-function ProjectImage({img}){
+function ProjectImage(){
+    
+    const img = useContext(ProjectContext).image;
+
     return (
         <>
             <img src={img} alt="" />
@@ -60,7 +44,10 @@ function ProjectImage({img}){
     )
 }
 
-function ProjectDetails({name, link, desc}){
+function ProjectDetails(){
+    const name = useContext(ProjectContext).pro_name;
+    const link = useContext(ProjectContext).url;
+    const desc = useContext(ProjectContext).desc;
     return (
         <>
             <div>
