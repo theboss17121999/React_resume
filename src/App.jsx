@@ -14,35 +14,37 @@ function App() {
   
   return (
     <>
-      <BrowserRouter basename="/React_resume/">
-        <div  className='sticky top-0 z-50 '>
-          <NavBar></NavBar>
-        </div>
-        {/* <Routes> 
-          <Route path='/education' element={<Education details={Edu_details}></Education>} />
-          <Route path='/' element={<Project details={details}></Project>} />
-        </Routes> */}
-        <div id="Home">
-          <Intro title={title}></Intro>
-        </div>
-        <div id="AboutMe" className='bg-stone-50'>
-          <AboutMe></AboutMe>
-        </div>
-        <div id="Education" className=''>
-          <EducationDetails />
-        </div>  
-        <div id="Project">
-          <ProjectDetails />
-        </div>
-        <div id="Contact">
-          <Contact />
-        </div>
-        <div className=''>
-          <div className='py-20 md:py-40 px:20 bg-black'>
-            <LowerBar ></LowerBar>
+      <div className='w-full overflow:hidden'>
+        <BrowserRouter basename="/React_resume/">
+          <div  className='sticky top-0 z-50 '>
+            <NavBar></NavBar>
           </div>
-        </div>
-      </BrowserRouter>
+          {/* <Routes> 
+            <Route path='/education' element={<Education details={Edu_details}></Education>} />
+            <Route path='/' element={<Project details={details}></Project>} />
+          </Routes> */}
+          <div id="Home">
+            <Intro title={title}></Intro>
+          </div>
+          <div id="AboutMe" className='bg-stone-50'>
+            <AboutMe></AboutMe>
+          </div>
+          <div id="Education" className=''>
+            <EducationDetails />
+          </div>  
+          <div id="Project">
+            <ProjectDetails />
+          </div>
+          <div id="Contact">
+            <Contact />
+          </div>
+          <div className=''>
+            <div className='py-20 md:py-40 px:20 bg-black'>
+              <LowerBar ></LowerBar>
+            </div>
+          </div>
+        </BrowserRouter>
+      </div>
     </>
   )
 }

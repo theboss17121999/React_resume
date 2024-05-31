@@ -9,7 +9,7 @@ export const Project = () => {
     
     return (
         <div className="">
-            <div className="">
+            <div class="duration-[300ms] taos:[transform:perspective(2500px)_rotateX(100deg)] taos:invisible taos:[backface-visibility:hidden]" data-taos-offset="-5">
                 <Projects />
             </div>
         </div>
