@@ -3,9 +3,13 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/*.{html,js}"
   ],
   theme: {
     extend: {
+      transitionDuration: {
+        '2000': '2000ms',
+      },
       colors: {
         'gree': '#149414',
         'name': '#941494',
@@ -46,5 +50,12 @@ export default {
       'blood': ['blood', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('taos/plugin')
+  ],
+  safelist: [
+    '!duration-[0ms]',
+    '!delay-[0ms]',
+    'html.js :where([class*="taos:"]:not(.taos-init))'
+  ],
 };
