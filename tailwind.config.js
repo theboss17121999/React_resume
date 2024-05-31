@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./src/*.{html,js}"
-  ],
+  content: {
+    files: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    transform: (content) => content.replace(/taos:/g, ''),
+  },
   theme: {
     extend: {
       transitionDuration: {

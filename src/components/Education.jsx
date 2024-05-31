@@ -22,6 +22,12 @@ export const Education = () =>{
             window.removeEventListener("scroll", onWindScroll);
         };
     }, []);
+
+    useEffect(() => {
+        import('taos').then((taos) => {
+            taos.init();
+        });
+    }, []);
  
     const classes = `transition-opacity transform duration-1000
         ${isVisible ? "opacity-100 translate-x-0 duration-1000" : "opacity-0 translate-x-full"
@@ -29,8 +35,8 @@ export const Education = () =>{
 
 
     return(
-        <div className="">
-            <div ref={ref} className={classes}>
+        <div class="delay-[300ms] duration-[600ms] taos:scale-[1.2] taos:opacity-0" data-taos-offset="400">
+            <div >
                 <EduCard />
             </div>
         </div>
