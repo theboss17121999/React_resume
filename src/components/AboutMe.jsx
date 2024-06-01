@@ -60,15 +60,15 @@ function GetToKnowMe() {
             <div>
                 <p className="text-lg md:text-2xl font-display2">GET TO KNOW ME!</p>
                 <div className="pt-4">
-                    <Reveal>
+                    <Reveal color='#110610'>
                         <p className="text-base md:text-xl">I’m a <strong className="text-gray-700">Developer</strong> building and managing different projects and applications that leads to the success of overall product. Check out some of my <strong className="text-gray-700">projects</strong> in the project section.</p>
                     </Reveal>
                     <br />
-                    <Reveal>
+                    <Reveal color='#110610'>
                     <p className="text-base md:text-xl">I also share some of my personal or <strong className="text-gray-700">professional</strong> achievements over the year. Feel free to connect or Follow me on my <a href="https://www.linkedin.com/in/shabose/" className="text-blue-500 underline hover:text-blue-900"><strong>Linkedin</strong></a> and <a href="https://www.instagram.com/shashwat_1712/" className="text-pink-500 underline hover:text-pink-900"><strong>Instagram</strong></a> where I post my achievements on development and programming.</p>
-                    </Reveal>
+                    </Reveal >
                     <br />
-                    <Reveal>
+                    <Reveal color='#110610'>
                     <p className="text-base md:text-xl">I'm <strong className="text-gray-700">open to Job opportunities</strong> where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
                     </Reveal>
                 </div>

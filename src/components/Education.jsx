@@ -30,7 +30,7 @@ function EduCard(){
     return(
         <>
             <div className=''>
-                <Reveal>
+                <Reveal color="#FF5733">
                     <div className='flex justify-center'>
                         <img src={img} alt="" className='px-20 md:px-8 w-128'/>
                     </div>

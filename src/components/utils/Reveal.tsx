@@ -4,10 +4,10 @@ import { motion, useAnimation, useInView } from "framer-motion";
 interface Props {
     children: JSX.Element;
     width?: "fit-content" | "100%";
-    height?:"100%";
+    color;
 }
 
-export const Reveal = ({ children, width = "fit-content" }: Props) => {
+export const Reveal = ({ children, width = "fit-content", color = "#15EA3C" }: Props) => {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true });
     const mainControl = useAnimation();
@@ -47,7 +47,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
                     bottom:4,
                     left:0,
                     right:0,
-                    background:"#15EA3C",
+                    background:color,
                     zIndex:20
                 }}
             >
