@@ -65,7 +65,9 @@ function Header() {
             <div>
                 <div className="flex flex-col justify-center items-center">
                     <Reveal>
-                        <p className="text-3xl md:text-5xl font-display2">Education</p>
+                        <div className='py-2'>
+                            <p className="text-3xl md:text-5xl font-display2">Education</p>
+                        </div>
                     </Reveal>
                     <div className="pt-3">
                         <div className="bg-gree w-8 h-1 mt-2 rounded-full"></div>

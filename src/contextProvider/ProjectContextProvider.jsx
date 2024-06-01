@@ -49,7 +49,9 @@ function Header() {
             <div>
                 <div className="flex flex-col justify-center items-center">
                     <Reveal>
-                        <h1 className="text-3xl md:text-5xl font-display2">Projects</h1>
+                        <div className="py-1">
+                            <h1 className="text-3xl md:text-5xl font-display2">Projects</h1>
+                        </div>
                     </Reveal>
                     <div className="pt-3">
                         <div className="bg-gree w-8 h-1 mt-2 rounded-full"></div>

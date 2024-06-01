@@ -72,11 +72,13 @@ function GetToKnowMe() {
                     <p className="text-base md:text-xl">I'm <strong className="text-gray-700">open to Job opportunities</strong> where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
                     </Reveal>
                 </div>
-                <div className="pt-16 flex justify-center md:justify-start">
-                    <Link to="#Contact" className="bg-purple-500 text-white font-bold py-4 px-16 rounded-lg text-xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" smooth>
-                        Contact
-                    </Link>
-                </div>
+                <Reveal>
+                    <div className="pt-16 flex justify-center md:justify-start">
+                        <Link to="#Contact" className="bg-purple-500 text-white font-bold py-4 px-16 rounded-lg text-xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" smooth>
+                            Contact
+                        </Link>
+                    </div>
+                </Reveal>
             </div>
         </div>
     );

@@ -14,7 +14,7 @@ function App() {
   
   return (
     <>
-      <div className='w-screen overflow:hidden'>
+      <div className='w-full overflow:hidden'>
         <BrowserRouter basename="/React_resume/">
           <div  className='sticky top-0 z-50 '>
             <NavBar></NavBar>
