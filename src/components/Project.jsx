@@ -11,9 +11,7 @@ export const Project = () => {
     return (
         <div className="">
             <div className="duration-[300ms] taos:[transform:perspective(2500px)_rotateX(100deg)] taos:invisible taos:[backface-visibility:hidden]" data-taos-offset="200">
-                <Reveal>
-                    <Projects />
-                </Reveal>
+                <Projects />
             </div>
         </div>
     );
@@ -25,9 +23,11 @@ function Projects(){
     return (
         <div className="pt-8 md:pt-32 px-4 sc:px-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <div>
-                    <ProjectImage />
-                </div>
+                <Reveal>
+                    <div>
+                        <ProjectImage />
+                    </div>
+                </Reveal>
                 <div className='content-center'>
                     <ProjectDetails />
                 </div>
@@ -55,11 +55,19 @@ function ProjectDetails(){
         <>
             <div>
                 <div className='flex justify-center md:justify-start'>
-                    <p className='font-display6 font-semibold text-purple-700 text-2xl md:text-3xljustify-items-center'>{name}</p>
+                    <Reveal>
+                        <p className='font-display6 font-semibold text-purple-700 text-2xl md:text-3xljustify-items-center'>{name}</p>
+                    </Reveal>
                 </div>
-                <p className='md:text-xl pt-4'>{desc}</p>
+                <Reveal>
+                    <p className='md:text-xl pt-4'>{desc}</p>
+                </Reveal>
                 <div className="pt-8 flex justify-center md:justify-start">
-                    <a href={link} className='bg-purple-800 text-white font-bold py-2 md:py-4 px-4 rounded-lg text-lg transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'>Repository</a>
+                    <Reveal>
+                        <div className='py-3'>
+                            <a href={link} className='bg-purple-800 text-white font-bold py-2 md:py-4 px-4 rounded-lg text-lg transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'>Repository</a>
+                        </div>
+                    </Reveal>
                 </div>
             </div>
         </>
