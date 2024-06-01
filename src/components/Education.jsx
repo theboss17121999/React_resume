@@ -29,12 +29,12 @@ function EduCard(){
 
     return(
         <>
-            <div className=''>
-                <Reveal color="#FF5733">
+            <div className=''>  
                     <div className='flex justify-center'>
-                        <img src={img} alt="" className='px-20 md:px-8 w-128'/>
+                        <Reveal color="#FF5733">
+                            <img src={img} alt="" className='px-20 md:px-8 w-128'/>
+                        </Reveal>
                     </div>
-                </Reveal>
                 <div className='flex justify-center pt-8'>
                     <Reveal>
                         <p className='font-display5 text-3xl'>{name}</p>

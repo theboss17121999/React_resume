@@ -1,28 +1,29 @@
 import './App.css'
 import { Intro } from './components/Intro'
 import { LowerBar } from './components/LowerBar'
-import {NavBar} from './components/TopBar'
-import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {AboutMe} from './components/AboutMe'
 import {Contact} from './components/Contact'
 import {ProjectDetails} from './contextProvider/ProjectContextProvider'
 import { EducationDetails } from './contextProvider/EducationContextProvider'
+import { motion, useScroll, useSpring } from 'framer-motion'
 
 
 function App() {
   const title = "Shashwat Bose";
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
   
   return (
     <>
       <div className='w-full overflow:hidden'>
-        <BrowserRouter basename="/React_resume/">
-          <div  className='sticky top-0 z-50 '>
-            <NavBar></NavBar>
-          </div>
-          {/* <Routes> 
-            <Route path='/education' element={<Education details={Edu_details}></Education>} />
-            <Route path='/' element={<Project details={details}></Project>} />
-          </Routes> */}
+          <motion.div
+            className="fixed top-15 left-0 right-0 h-1 bg-blue-500 origin-left z-50"
+            style={{ scaleX }}
+          />
           <div id="Home">
             <Intro title={title}></Intro>
           </div>
@@ -43,7 +44,6 @@ function App() {
               <LowerBar ></LowerBar>
             </div>
           </div>
-        </BrowserRouter>
       </div>
     </>
   )
