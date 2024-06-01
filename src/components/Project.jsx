@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import T1 from '../assets/background/tiles1.svg';
 import project1 from '../assets/project/LapPro1.png';
 import { ProjectContext } from '../context/ProjextContext';
+import { Reveal } from './utils/Reveal';
 
 
 export const Project = () => {
@@ -10,7 +11,9 @@ export const Project = () => {
     return (
         <div className="">
             <div className="duration-[300ms] taos:[transform:perspective(2500px)_rotateX(100deg)] taos:invisible taos:[backface-visibility:hidden]" data-taos-offset="200">
-                <Projects />
+                <Reveal>
+                    <Projects />
+                </Reveal>
             </div>
         </div>
     );

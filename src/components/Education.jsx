@@ -13,9 +13,7 @@ export const Education = () =>{
 
     return(
         <div>
-            <Reveal>
-                <EduCard />
-            </Reveal>
+            <EduCard />
         </div>
     )
 }
@@ -32,20 +30,28 @@ function EduCard(){
     return(
         <>
             <div className=''>
-                <div className='flex justify-center'>
-                    <img src={img} alt="" className='px-20 md:px-8 w-128'/>
-                </div>
+                <Reveal>
+                    <div className='flex justify-center'>
+                        <img src={img} alt="" className='px-20 md:px-8 w-128'/>
+                    </div>
+                </Reveal>
                 <div className='flex justify-center pt-8'>
-                    <p className='font-display5 text-3xl'>{name}</p>
+                    <Reveal>
+                        <p className='font-display5 text-3xl'>{name}</p>
+                    </Reveal>
                 </div>
                 <div className="pt-3 flex justify-center">
                     <div className="bg-black w-28 h-0.5 mt-2 rounded-full"></div>
                 </div>
                 <div className="pt-3 flex justify-center">
-                    <p>{year}</p>
+                    <Reveal>
+                        <p>{year}</p>
+                    </Reveal>
                 </div>
                 <div className='flex justify-center pt-3 px-8 text-center font-display6'>
-                    <p>{details}</p>
+                    <Reveal>
+                        <p>{details}</p>
+                    </Reveal>
                 </div>
             </div>
         </>
