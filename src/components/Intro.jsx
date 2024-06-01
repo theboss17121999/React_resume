@@ -10,7 +10,7 @@ export const Intro = ({ title }) => {
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                 <div className="font-display2 text-4xl text-whitw mb-4">Hi, My name is</div>
                 <div className="font-handwriting text-6xl md:text-8xl text-purple-700 mb-8">{title}.</div>
-                <div className="font-handwriting text-3xl md:text-6xl text-white mb-6 inline-block">
+                <div className="font-handwriting text-4xl md:text-8xl text-white mb-6 inline-block">
                     <TypeAnimation
                         sequence={[
                             'I am a Developer.',
@@ -29,17 +29,13 @@ export const Intro = ({ title }) => {
                             2000,
                             'I enjoy learning new technologies.',
                             2000,
-                            'I work well in teams.',
-                            2000,
-                            'I value clear communication.',
-                            2000,
                             'I am always learning new skills.',
                             2000,
                             'I stay updated with industry trends.',
                             2000
                         ]}
                         wrapper="span"
-                        speed={50}
+                        speed={70}
                         repeat={Infinity}
                     />
                 </div>
