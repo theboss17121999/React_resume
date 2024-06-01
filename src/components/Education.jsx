@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState , useContext } from "react";
 import { EducationContext } from '../context/EducationContext';
+import { Reveal } from "./utils/Reveal.tsx";
+
 
 export const Education = () =>{
-    
     
     useEffect(() => {
         import('taos').then((taos) => {
@@ -11,10 +12,10 @@ export const Education = () =>{
     }, []);
 
     return(
-        <div className="delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0 " data-taos-offset="200">
-            <div >
+        <div>
+            <Reveal>
                 <EduCard />
-            </div>
+            </Reveal>
         </div>
     )
 }

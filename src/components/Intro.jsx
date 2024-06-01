@@ -1,6 +1,8 @@
 import sv2 from '../assets/background/low-poly-grid-haikei.svg'
 import {HashLink as Link} from "react-router-hash-link"
 import { TypeAnimation } from 'react-type-animation';
+import { Reveal } from "./utils/Reveal.tsx";
+
 
 
 export const Intro = ({ title }) => {

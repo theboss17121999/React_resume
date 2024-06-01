@@ -3,6 +3,7 @@ import DPS from '../assets/educationLogo/dps.png';
 import CU from '../assets/educationLogo/CU.png';
 import { Education } from '../components/Education';
 import { EducationContext } from '../context/EducationContext';
+import { Reveal } from '../components/utils/Reveal';
 
 export const EducationDetails = () =>{
     const Edu_details = [
@@ -63,13 +64,17 @@ function Header() {
         <div className="flex flex-col justify-center items-center px-4 md:px-0">
             <div>
                 <div className="flex flex-col justify-center items-center">
-                    <p className="text-3xl md:text-5xl font-display2">Education</p>
+                    <Reveal>
+                        <p className="text-3xl md:text-5xl font-display2">Education</p>
+                    </Reveal>
                     <div className="pt-3">
                         <div className="bg-gree w-8 h-1 mt-2 rounded-full"></div>
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center pt-12 w-full sc:w-160 sc:px-4">
+                    <Reveal>
                     <p className="text-lg md:text-xl text-center">Here you will find more information about my educational background, including where I studied and what I studied.</p>
+                    </Reveal>
                 </div>
             </div>
         </div>
