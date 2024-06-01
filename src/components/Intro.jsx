@@ -13,7 +13,7 @@ export const Intro = ({ title }) => {
                     <div className="font-display2 text-4xl text-whitw mb-4">Hi, My name is</div>
                 </Reveal>
                 <Reveal>
-                    <div className="font-handwriting text-6xl md:text-8xl text-purple-700 mb-8">{title}.</div>
+                    <div className="font-handwriting text-6xl md:text-8xl text-yellow-500 mb-8">{title}.</div>
                 </Reveal>
                 <div className="font-handwriting text-4xl md:text-8xl text-white mb-6 inline-block">
                     <TypeAnimation
