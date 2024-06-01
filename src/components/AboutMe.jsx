@@ -89,7 +89,7 @@ function Skills() {
 
 const StringInBox = ({ text }) => {
     return (
-        <div className="delay-[300ms] duration-[400ms] taos:[transform:translate3d(0,-200px,0)_scale(1.2)] taos:opacity-0 inline-block [animation-iteration-count:infinite]" data-taos-offset="200">
+        <div className="delay-[300ms] duration-[400ms] taos:[transform:translate3d(0,-200px,0)_scale(1.2)] taos:opacity-0 inline-block " data-taos-offset="200">
             <div className="inline-block bg-gray-200 text-gray-600 rounded-lg py-3 px-4 mr-4 mb-4 text-sm md:text-base font-semibold lg:hover:bg-purple-500 lg:hover:text-white lg:duration-300">
                 {text.trim()}
             </div>

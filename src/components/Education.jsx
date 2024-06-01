@@ -11,7 +11,7 @@ export const Education = () =>{
     }, []);
 
     return(
-        <div className="duration-[600ms] taos:[transform:perspective(2500px)_rotateX(100deg)] taos:invisible taos:[backface-visibility:hidden] [animation-iteration-count:infinite]" data-taos-offset="200">
+        <div className="delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0 " data-taos-offset="200">
             <div >
                 <EduCard />
             </div>
