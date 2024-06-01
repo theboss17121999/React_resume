@@ -17,7 +17,7 @@ export const NavBar= () =>{
       link: "#Education"
     },
     {
-      name: "Project",
+      name: "Projects",
       link: "#Project"
     },
     {
