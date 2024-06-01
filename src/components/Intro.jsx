@@ -4,8 +4,6 @@ import {HashLink as Link} from "react-router-hash-link"
 import { TypeAnimation } from 'react-type-animation';
 import { Reveal } from "./utils/Reveal.tsx";
 
-
-
 export const Intro = ({ title }) => {
     return (
         <div className="relative h-screen bg-cover bg-center" style={{backgroundImage: `url(${sv1})`, overflow: 'hidden'}}>
