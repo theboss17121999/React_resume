@@ -1,4 +1,5 @@
 import sv2 from '../assets/background/low-poly-grid-haikei.svg'
+import sv1 from '../assets/background/wavey-fingerprint.svg'
 import {HashLink as Link} from "react-router-hash-link"
 import { TypeAnimation } from 'react-type-animation';
 import { Reveal } from "./utils/Reveal.tsx";
@@ -7,14 +8,19 @@ import { Reveal } from "./utils/Reveal.tsx";
 
 export const Intro = ({ title }) => {
     return (
-        <div className="relative h-screen bg-cover bg-center" style={{backgroundImage: `url(${sv2})`, overflow: 'hidden'}}>
+        <div className="relative h-screen bg-cover bg-center" style={{backgroundImage: `url(${sv1})`, overflow: 'hidden'}}>
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                <div className="font-display2 text-4xl text-whitw mb-4">Hi, My name is</div>
-                <div className="font-handwriting text-6xl md:text-8xl text-purple-700 mb-8">{title}.</div>
+                <Reveal>
+                    <div className="font-display2 text-4xl text-whitw mb-4">Hi, My name is</div>
+                </Reveal>
+                <Reveal>
+                    <div className="font-handwriting text-6xl md:text-8xl text-purple-700 mb-8">{title}.</div>
+                </Reveal>
                 <div className="font-handwriting text-4xl md:text-8xl text-white mb-6 inline-block">
                     <TypeAnimation
                         sequence={[
+                            500,
                             'I am a Developer.',
                             2000,
                             'I make web applications.',
@@ -46,7 +52,11 @@ export const Intro = ({ title }) => {
                     I am a highly skilled programmer with expertise in the M.E.R.N. Stack. With a passion for solving complex problems and a strong foundation in programming languages, I strive to create efficient and scalable solutions.
                 </div> */}
                 <div className='pt-10'>
-                    <BigButton text={"PROJECTS"}/>
+                    <Reveal >
+                        <div className='p-5'>
+                            <BigButton text={"PROJECTS"}/>
+                        </div>
+                    </Reveal>
                 </div>
             </div>
         </div>
