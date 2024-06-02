@@ -15,7 +15,8 @@ export default {
         'lightgreen': '#9ccc9c',
       },
       backgroundImage: {
-        'KV': "url('../src/assets/educationLogo/kv.png')",
+        'bg1': "url('../src/assets/background/wavey-fingerprint.svg')",
+        'bg2': "url('../src/assets/background/india.svg')",
       },
       spacing: {
         '170': '75rem',
@@ -32,7 +33,7 @@ export default {
       },
       textUnderlineOffset: {
         19: '19px',
-      }
+      },
     },
     fontFamily: {
       'jersey': ['"Jersey 15"', 'sans-serif'],
@@ -40,7 +41,7 @@ export default {
       'display2': ["Poetsen One", 'sans-serif'],
       'display4': ["Sedan SC", 'serif'],
       'display5': ["Oswald", 'sans-serif'],
-      'display6':["Kanit", 'sans-serif'],
+      'display6': ["Kanit", 'sans-serif'],
       'handwriting': ["Just Another Hand", 'cursive'],
       'cursive1': ["Yellowtail", 'cursive'],
       'cursive2': ["Pacifico", 'cursive'],
@@ -50,11 +51,11 @@ export default {
     },
   },
   plugins: [
-    require('taos/plugin')
+    require('taos/plugin'),
   ],
   safelist: [
     '!duration-[0ms]',
     '!delay-[0ms]',
-    'html.js :where([class*="taos:"]:not(.taos-init))'
+    'html.js :where([class*="taos:"]:not(.taos-init))',
   ],
 };
