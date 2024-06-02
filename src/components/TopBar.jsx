@@ -125,7 +125,7 @@ function NavButtons({block }) {
     <Link
       to={link}
       className={`rounded-lg p-2 font-display2 ${
-        block ? "text-black block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
+        block ? "text-black text-sm block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
       }`}
       smooth
     >
