@@ -36,7 +36,14 @@ export const NavBar= () => {
   }
 
   const { scrollYProgress } = useScroll();
+  
   const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  const scaleY = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001
@@ -112,8 +119,20 @@ export const NavBar= () => {
         )}
       </nav>
       <motion.div
-        className="fixed top-16 md:top-14 lg:top-20 w-full h-1 bg-blue-500 origin-left z-50"
+        className="fixed top-0 w-full h-2 bg-blue-500 origin-left z-50"
         style={{ scaleX }}
+      />
+      <motion.div
+        className="fixed bottom-0 w-full h-2 bg-blue-500 origin-right z-50"
+        style={{ scaleX }}
+      />
+      <motion.div
+        className="fixed top-0 h-full w-2 bg-blue-500 origin-top z-50"
+        style={{ scaleY }}
+      />
+      <motion.div
+        className="fixed right-0 h-full w-2 bg-blue-500 origin-bottom z-50"
+        style={{ scaleY }}
       />
     </>
   )
