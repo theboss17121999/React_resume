@@ -1,27 +1,27 @@
 import { useContext, useState } from "react"
 import {HashLink as Link} from "react-router-hash-link"
 import { NavBarContext } from "../context/NavBarContext";
-
+import shashwat from '../assets/Intro/shashwat.jpg';
 export const NavBar= () =>{
   const navbar =[
     {
-      name: "Home",
+      name: "HOME",
       link: "#Home"
     },
     {
-      name: "About Me",
+      name: "ABOUT ME",
       link: "#AboutMe"
     },
     {
-      name: "Education",
+      name: "EDUCATION",
       link: "#Education"
     },
     {
-      name: "Projects",
+      name: "PROJECTS",
       link: "#Project"
     },
     {
-      name: "Contact",
+      name: "CONTACT",
       link: "#Contact"
     },
   ]
@@ -32,18 +32,16 @@ export const NavBar= () =>{
     setIsClick(!isClick);
   }
   return (
-      <nav className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+      <nav className="bg-slate-200">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 md:h-18 lg:h-20">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-              <Link to="#Home" className="text-white" smooth>
-                  Shashwat Bose
-                </Link>
+                <TopLogo />
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="ml-4 flex items-center space-x-4">
+              <div className="ml-4 flex items-center space-x-6 pr-6">
                 {navbar.map((navbar, index) => (
                     <div key={index} className="py-2">
                       <NavBarContext.Provider value={navbar}>
@@ -55,7 +53,7 @@ export const NavBar= () =>{
             </div>
             <div className="md:hidden flex items-center">
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
               onClick={toggleNavBar}
               >
                 { isClick ? (
@@ -111,7 +109,7 @@ function NavButtons({block }) {
     <Link
       to={link}
       className={`rounded-lg p-2 font-display2 ${
-        block ? "text-white block hover:bg-white hover:text-black" : "text-white hover:bg-white hover:text-black text-lg"
+        block ? "text-black block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
       }`}
       smooth
     >
@@ -119,3 +117,18 @@ function NavButtons({block }) {
     </Link>
   );
 }
+
+function TopLogo(){
+  return (
+    <a href="https://theboss17121999.github.io/React_resume/" className="group hover:bg-black">
+      <div className="flex items-center"> 
+        <img src={shashwat} alt="shashwat" className="w-6 md:w-8 lg:w-12 rounded-full" />
+        <div className="text-black text-base md:text-lg lg:text-2xl font-display5 ml-2 group-hover:text-purple-700"> 
+          Shashwat Bose
+        </div>
+      </div>
+    </a>
+  );
+}
+
+
