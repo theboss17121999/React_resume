@@ -142,17 +142,15 @@ function NavButtons({block }) {
   const name = useContext(NavBarContext).name;
   const link = useContext(NavBarContext).link;
   return (
-    <Reveal color="red">
-      <Link
-        to={link}
-        className={`rounded-lg p-2 font-display2 ${
-          block ? "text-black text-sm block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
-        }`}
-        smooth
-      >
-        {name}
-      </Link>
-    </Reveal>
+    <Link
+      to={link}
+      className={`rounded-lg p-2 font-display2 ${
+        block ? "text-black text-sm block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
+      }`}
+      smooth
+    >
+      {name}
+    </Link>
   );
 }
 

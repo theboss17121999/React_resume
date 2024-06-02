@@ -4,12 +4,6 @@ import { Reveal } from "./utils/Reveal.tsx";
 
 
 export const Education = () =>{
-    
-    useEffect(() => {
-        import('taos').then((taos) => {
-            taos.init();
-        });
-    }, []);
 
     return(
         <div>

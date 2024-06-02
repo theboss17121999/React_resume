@@ -10,7 +10,7 @@ export const Project = () => {
     
     return (
         <div className="">
-            <div className="duration-[300ms] taos:[transform:perspective(2500px)_rotateX(100deg)] taos:invisible taos:[backface-visibility:hidden]" data-taos-offset="200">
+            <div className="">
                 <Projects />
             </div>
         </div>
@@ -59,11 +59,11 @@ function ProjectDetails(){
                         <p className='font-display6 font-semibold text-purple-700 text-2xl md:text-3xljustify-items-center'>{name}</p>
                     </Reveal>
                 </div>
-                <Reveal>
+                <Reveal color='#ffcc66'>
                     <p className='md:text-xl pt-4'>{desc}</p>
                 </Reveal>
                 <div className="pt-8 flex justify-center md:justify-start">
-                    <Reveal>
+                    <Reveal color='#cccc00'>
                         <div className='py-3'>
                             <a href={link} className='bg-purple-800 text-white font-bold py-2 md:py-4 px-4 rounded-lg text-lg transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'>Repository</a>
                         </div>
