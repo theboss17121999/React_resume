@@ -3,6 +3,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { NavBarContext } from "../context/NavBarContext";
 import shashwat from '../assets/Intro/shashwat.jpg';
 import { motion, useScroll, useSpring } from 'framer-motion'
+import { Reveal } from "./utils/Reveal";
 
 export const NavBar= () => {
   const navbar =[
@@ -122,27 +123,31 @@ function NavButtons({block }) {
   const name = useContext(NavBarContext).name;
   const link = useContext(NavBarContext).link;
   return (
-    <Link
-      to={link}
-      className={`rounded-lg p-2 font-display2 ${
-        block ? "text-black text-sm block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
-      }`}
-      smooth
-    >
-      {name}
-    </Link>
+    <Reveal color="red">
+      <Link
+        to={link}
+        className={`rounded-lg p-2 font-display2 ${
+          block ? "text-black text-sm block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
+        }`}
+        smooth
+      >
+        {name}
+      </Link>
+    </Reveal>
   );
 }
 
 function TopLogo(){
   return (
     <a href="https://theboss17121999.github.io/React_resume/" className="group hover:bg-black">
-      <div className="flex items-center"> 
-        <img src={shashwat} alt="shashwat" className="w-6 md:w-8 lg:w-12 rounded-full" />
-        <div className="text-black text-base md:text-lg lg:text-2xl font-display5 ml-2 group-hover:text-purple-700"> 
-          Shashwat Bose
+      <Reveal>
+        <div className="flex items-center"> 
+          <img src={shashwat} alt="shashwat" className="w-6 md:w-8 lg:w-12 rounded-full" />
+          <div className="text-black text-base md:text-lg lg:text-2xl font-display5 ml-2 group-hover:text-purple-700"> 
+            Shashwat Bose
+          </div>
         </div>
-      </div>
+      </Reveal>
     </a>
   );
 }
