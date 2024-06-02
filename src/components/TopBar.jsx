@@ -160,7 +160,7 @@ function TopLogo(){
       <Reveal>
         <div className="flex items-center"> 
           <img src={shashwat} alt="shashwat" className="w-6 md:w-8 lg:w-12 rounded-full" />
-          <div className="text-black text-base md:text-lg lg:text-2xl font-display5 ml-2 group-hover:text-purple-700"> 
+          <div className="text-black text-lg lg:text-2xl font-display5 ml-2 group-hover:text-purple-700"> 
             Shashwat Bose
           </div>
         </div>
