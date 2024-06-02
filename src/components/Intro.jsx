@@ -63,7 +63,7 @@ export const Intro = ({ title }) => {
 
 function BigButton({ text }) {
     return (
-        <Link to="#Project" className="text-white font-bold py-3 md:py-4 px-8 md:px-16 rounded-lg text-lg md:text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 border-double border-green-500 rounded-t-xl border-4" smooth>
+        <Link to="#Project" className="text-white font-bold py-3 md:py-4 px-8 md:px-16 rounded-lg text-lg md:text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 border-double border-green-500 hover:border hover:border-black rounded-t-xl border-4" smooth>
             {text}
         </Link>
     );
