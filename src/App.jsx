@@ -10,20 +10,10 @@ import { motion, useScroll, useSpring } from 'framer-motion'
 
 function App() {
   const title = "Shashwat Bose";
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
   
   return (
     <>
       <div className='w-full overflow:hidden'>
-          <motion.div
-            className="fixed top-15 left-0 right-0 h-1 bg-blue-500 origin-left z-50"
-            style={{ scaleX }}
-          />
           <div id="Home">
             <Intro title={title}></Intro>
           </div>

@@ -1,8 +1,10 @@
-import { useContext, useState } from "react"
-import {HashLink as Link} from "react-router-hash-link"
+import { useContext, useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import { NavBarContext } from "../context/NavBarContext";
 import shashwat from '../assets/Intro/shashwat.jpg';
-export const NavBar= () =>{
+import { motion, useScroll, useSpring } from 'framer-motion'
+
+export const NavBar= () => {
   const navbar =[
     {
       name: "HOME",
@@ -31,8 +33,17 @@ export const NavBar= () =>{
   const toggleNavBar = () => {
     setIsClick(!isClick);
   }
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   return (
-      <nav className="bg-slate-200">
+    <>
+      <nav className="bg-slate-200 fixed w-screen top-0 z-50">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-18 lg:h-20">
             <div className="flex items-center">
@@ -43,18 +54,18 @@ export const NavBar= () =>{
             <div className="hidden md:block">
               <div className="ml-4 flex items-center space-x-6 pr-6">
                 {navbar.map((navbar, index) => (
-                    <div key={index} className="py-2">
-                      <NavBarContext.Provider value={navbar}>
-                        <NavButtons  block={false}/>
-                      </NavBarContext.Provider>
-                    </div>
+                  <div key={index} className="py-2">
+                    <NavBarContext.Provider value={navbar}>
+                      <NavButtons  block={false}/>
+                    </NavBarContext.Provider>
+                  </div>
                 ))} 
               </div>
             </div>
             <div className="md:hidden flex items-center">
-            <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
-              onClick={toggleNavBar}
+              <button
+                className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
+                onClick={toggleNavBar}
               >
                 { isClick ? (
                   <svg  className="h-6 w-6"
@@ -88,17 +99,22 @@ export const NavBar= () =>{
         {isClick && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                {navbar.map((navbar, index) => (
-                  <div key={index} className="py-2">
-                      <NavBarContext.Provider value={navbar}>
-                        <NavButtons  block={true}/>
-                      </NavBarContext.Provider>
-                  </div>
-                ))} 
+              {navbar.map((navbar, index) => (
+                <div key={index} className="py-2">
+                  <NavBarContext.Provider value={navbar}>
+                    <NavButtons  block={true}/>
+                  </NavBarContext.Provider>
+                </div>
+              ))} 
             </div>
           </div>
         )}
       </nav>
+      <motion.div
+        className="fixed top-16 md:top-14 lg:top-20 w-full h-1 bg-blue-500 origin-left z-50"
+        style={{ scaleX }}
+      />
+    </>
   )
 }
 
@@ -130,5 +146,3 @@ function TopLogo(){
     </a>
   );
 }
-
-

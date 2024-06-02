@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom'
 ReactDOM.createRoot(document.getElementById('root')).render(
     <StrictMode>
         <BrowserRouter basename="/React_resume/">
-        <div  className='sticky top-0 z-50 '>
+        <div  className=''>
             <NavBar />
           </div>
         <App />
