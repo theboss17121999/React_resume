@@ -4,10 +4,11 @@ import { motion, useAnimation, useInView } from "framer-motion";
 interface Props {
     children: JSX.Element;
     width?: "fit-content" | "100%";
-    color;
+    color?: string; // Add type declaration for color prop
+    duration?: number; // Add type declaration for duration prop
 }
 
-export const Reveal = ({ children, width = "fit-content", color = "#15EA3C" }: Props) => {
+export const Reveal = ({ children, width = "fit-content", color = "#15EA3C", duration = 0.5 }: Props) => {
     const ref = useRef(null);
     const inView = useInView(ref, { once: true });
     const mainControl = useAnimation();
@@ -29,28 +30,28 @@ export const Reveal = ({ children, width = "fit-content", color = "#15EA3C" }: P
                 }}
                 initial="hidden"
                 animate={mainControl}
-                transition={{ duration: 0.5, delay: 0.25 }}
+                transition={{ duration: duration, delay: 0.25 }} // Corrected duration
             >
                 {children}
             </motion.div>
             <motion.div
                 variants={{
-                    hidden: { left:0},
-                    visible: { left:"100%" },
+                    hidden: { left: 0 },
+                    visible: { left: "100%" },
                 }}
                 initial="hidden"
-                animate={mainControl}
-                transition={{ duration: 0.5, ease:"easeIn"}}
+                animate={slideControl} // Corrected animation control
+                transition={{ duration: 0.5, ease: "easeIn" }}
                 style={{
                     position: "absolute",
-                    top:4,
-                    bottom:4,
-                    left:0,
-                    right:0,
-                    background:color,
-                    zIndex:20,
+                    top: 4,
+                    bottom: 4,
+                    left: 0,
+                    right: 0,
+                    background: color,
+                    zIndex: 20,
                     borderTopLeftRadius: 5,
-                    borderBottomLeftRadius: 5 
+                    borderBottomLeftRadius: 5
                 }}
             >
             </motion.div>

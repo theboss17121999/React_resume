@@ -23,7 +23,7 @@ function Projects(){
     return (
         <div className="pt-8 md:pt-32 px-4 sc:px-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <Reveal>
+                <Reveal duration={0.25}>
                     <div>
                         <ProjectImage />
                     </div>
