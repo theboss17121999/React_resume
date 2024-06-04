@@ -60,7 +60,7 @@ function ProjectDetails(){
                     </Reveal>
                 </div>
                 <Reveal color='#ffcc66'>
-                    <p className='md:text-lg pt-4'>{desc}</p>
+                    <p className='md:text-lg pt-4 px-4 md:px-0 inline-block flex items-center justify-center text-center md:text-left'>{desc}</p>
                 </Reveal>
                 <div className="pt-8 flex justify-center md:justify-start">
                     <Reveal color='#cccc00'>
