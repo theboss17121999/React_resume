@@ -28,7 +28,7 @@ export const ProjectDetails = () =>{
         // }
         ];
     return (
-        <div className="bg-gray-100 flex justify-center py-24 w-full">
+        <div className="bg-gray-100 flex justify-center pt-24 md:pb-16 w-full">
             <div className="w-full sc:w-170">
                 <Header />
                 <div className="divide-y-4 divide-slate-200">

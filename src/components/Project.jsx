@@ -21,7 +21,7 @@ function Projects(){
 
 
     return (
-        <div className="pt-8 md:pt-32 px-4 sc:px-0">
+        <div className="pt-8 md:pt-24 px-4 sc:px-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <Reveal duration={0.25}>
                     <div>
@@ -53,7 +53,7 @@ function ProjectDetails(){
     const desc = useContext(ProjectContext).desc;
     return (
         <>
-            <div>
+            <div className='pb-8 '>
                 <div className='flex justify-center md:justify-start'>
                     <Reveal>
                         <p className='font-display6 font-semibold text-purple-700 text-2xl md:text-3xljustify-items-center'>{name}</p>
