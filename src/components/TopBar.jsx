@@ -60,7 +60,7 @@ export const NavBar= () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <div className="ml-4 flex items-center space-x-6 pr-6">
+              <div className="ml-4 flex items-center space-x-6 md:pr-3 lg:pr-6">
                 {navbar.map((navbar, index) => (
                   <div key={index} className="py-2">
                     <NavBarContext.Provider value={navbar}>
@@ -152,8 +152,8 @@ function NavButtons({block , toggleNavBar ,setIsClick ,isClick }) {
         <button className='w-full text-right pr-8' onClick={toggleNavBar}>
           <Link
             to={link}
-            className={`rounded-lg p-2 font-mono font-semibold ${
-              block ? "text-black block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
+            className={`lg:p-2 font-mono font-semibold ${
+              block ? "text-black block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-sm lg:text-base"
             }`}
             smooth
           >

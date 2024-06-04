@@ -24,7 +24,7 @@ function Social() {
     return (
         <div className="text-white pt-8 md:pt-0">
             <div className='flex justify-center md:justify-normal'>
-                <div className="text-green-500 font-display2 text-4xl mb-4">SOCIAL</div>
+                <div className="text-purple-800 font-display2 text-4xl mb-4">SOCIAL</div>
             </div>
             <div className=''>
                 <AllHandles />
