@@ -1,6 +1,7 @@
 import { ProjectContext } from "../context/ProjextContext";
 import project1 from '../assets/project/LapPro1.png';
 import project2 from '../assets/project/LapPro2.png';
+import project3 from '../assets/project/hello.png';
 import { Project } from "../components/Project";
 import { Reveal } from "../components/utils/Reveal";
 
@@ -9,7 +10,7 @@ export const ProjectDetails = () =>{
     const details = [
         {
             pro_name: "Portfolio",
-            image: project2,
+            image: project3,
             desc: "It includes information about individuals, such as their education, projects, and contact details, as well as the skills they have acquired over the years.",
             url :"https://github.com/theboss17121999/React_resume"
         },
