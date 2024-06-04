@@ -70,9 +70,9 @@ export const NavBar= () => {
                 ))} 
               </div>
             </div>
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center pr-4">
               <button
-                className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
+                className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-purple-600"
                 onClick={toggleNavBar}
               >
                 { isClick ? (
@@ -105,13 +105,18 @@ export const NavBar= () => {
           </div>
         </div>
         {isClick && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="md:hidden w-screen">
+            <div className="pt-2 pb-3 space-y-3 divide-y divide-slate-300">
+              <div className="border-solid border-1 slate-200">
+
+              </div>
               {navbar.map((navbar, index) => (
-                <div key={index} className="py-2">
-                  <NavBarContext.Provider value={navbar}>
-                    <NavButtons  block={true} toggleNavBar={toggleNavBar} setIsClick={setIsClick} isClick={isClick}/>
-                  </NavBarContext.Provider>
+                <div key={index} className="pt-3">
+                  <div className="">
+                    <NavBarContext.Provider value={navbar}>
+                      <NavButtons  block={true} toggleNavBar={toggleNavBar} setIsClick={setIsClick} isClick={isClick}/>
+                    </NavBarContext.Provider>
+                  </div>
                 </div>
               ))} 
             </div>
@@ -142,17 +147,21 @@ function NavButtons({block , toggleNavBar ,setIsClick ,isClick }) {
   const name = useContext(NavBarContext).name;
   const link = useContext(NavBarContext).link;
   return (
-    <button onClick={toggleNavBar}>
-      <Link
-        to={link}
-        className={`rounded-lg p-2 font-display2 ${
-          block ? "text-black text-sm block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
-        }`}
-        smooth
-      >
-        {name}
-      </Link>
-    </button>
+    <>
+      <div>
+        <button className='w-full text-right pr-8' onClick={toggleNavBar}>
+          <Link
+            to={link}
+            className={`rounded-lg p-2 font-mono font-semibold ${
+              block ? "text-black block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
+            }`}
+            smooth
+          >
+            {name}
+          </Link>
+        </button>
+      </div>
+    </>
   );
 }
 
