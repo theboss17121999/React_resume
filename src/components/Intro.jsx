@@ -7,7 +7,7 @@ import { faLinkedin, faGithub, faFacebook, faInstagram } from '@fortawesome/free
 
 export const Intro = ({ title }) => {
     return (
-        <div className="relative h-screen bg-cover bg-center overflow-hidden bg-bg2 md:bg-bg1">
+        <div className="relative h-smScreen lg:h-screen bg-cover bg-center overflow-hidden bg-bg2 md:bg-bg1">
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                 <Reveal>

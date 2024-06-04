@@ -6,6 +6,9 @@ export default {
   },
   theme: {
     extend: {
+      height: {
+        'screen-and-full': 'max(h-screen, h-h-3/4)',
+      },
       transitionDuration: {
         '2000': '2000ms',
       },
@@ -19,6 +22,7 @@ export default {
         'bg2': "url('../src/assets/background/india.svg')",
       },
       spacing: {
+        'smScreen': '50rem',
         '170': '75rem',
         '160': '60rem',
         '128': '28rem',

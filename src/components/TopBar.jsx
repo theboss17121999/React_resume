@@ -110,7 +110,7 @@ export const NavBar= () => {
               {navbar.map((navbar, index) => (
                 <div key={index} className="py-2">
                   <NavBarContext.Provider value={navbar}>
-                    <NavButtons  block={true}/>
+                    <NavButtons  block={true} toggleNavBar={toggleNavBar} setIsClick={setIsClick} isClick={isClick}/>
                   </NavBarContext.Provider>
                 </div>
               ))} 
@@ -138,19 +138,21 @@ export const NavBar= () => {
   )
 }
 
-function NavButtons({block }) {
+function NavButtons({block , toggleNavBar ,setIsClick ,isClick }) {
   const name = useContext(NavBarContext).name;
   const link = useContext(NavBarContext).link;
   return (
-    <Link
-      to={link}
-      className={`rounded-lg p-2 font-display2 ${
-        block ? "text-black text-sm block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
-      }`}
-      smooth
-    >
-      {name}
-    </Link>
+    <button onClick={toggleNavBar}>
+      <Link
+        to={link}
+        className={`rounded-lg p-2 font-display2 ${
+          block ? "text-black text-sm block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-base lg:text-lg"
+        }`}
+        smooth
+      >
+        {name}
+      </Link>
+    </button>
   );
 }
 
