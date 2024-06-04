@@ -31,13 +31,15 @@ export const ProjectDetails = () =>{
         <div className="bg-gray-100 flex justify-center py-24 w-full">
             <div className="w-full sc:w-170">
                 <Header />
-                {details.map((details, index) => (
-                    <div key={index} className="py-2">
-                        <ProjectContext.Provider value={details}>
-                            <Project  />
-                        </ProjectContext.Provider>
-                    </div>
-                ))} 
+                <div className="divide-y-4 divide-slate-200">
+                    {details.map((details, index) => (
+                        <div key={index} className="py-2">
+                            <ProjectContext.Provider value={details}>
+                                <Project  />
+                            </ProjectContext.Provider>
+                        </div>
+                    ))} 
+                </div>
             </div>
         </div>
         
@@ -51,7 +53,7 @@ function Header() {
                 <div className="flex flex-col justify-center items-center">
                     <Reveal>
                         <div className="py-1">
-                            <h1 className="text-3xl md:text-5xl font-display2">Projects</h1>
+                            <h1 className="text-3xl md:text-5xl font-display2 text-gray-700">Projects</h1>
                         </div>
                     </Reveal>
                     <div className="pt-3">
@@ -60,9 +62,12 @@ function Header() {
                 </div>
                 <div className="flex flex-col justify-center items-center pt-12 w-full sc:w-160 sc:px-4">
                     <Reveal>
-                        <p className="text-lg md:text-xl text-center">Here you will find more information about my educational background, including where I studied and the grades I achieved.</p>
+                        <p className="text-lg md:text-xl text-center text-slate-600 font-medium">Here you will find more information about my educational background, including where I studied and the grades I achieved.</p>
                     </Reveal>
                 </div>
+            </div>
+            <div className="pt-6 md:hidden">
+                <div className="bg-slate-200 w-screen h-1 mt-2 "></div>
             </div>
         </div>
     );

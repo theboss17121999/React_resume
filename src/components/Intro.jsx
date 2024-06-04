@@ -16,8 +16,9 @@ export const Intro = ({ title }) => {
                 <Reveal>
                     <div className="font-cursive1 text-6xl md:text-8xl text-yellow-500 mb-8 backdrop-blur-sm">{title}.</div>
                 </Reveal>
-                <div className="font-handwriting text-4xl md:text-6xl lg:text-8xl text-white mb-6 inline-block">
+                <div className="font-handwriting text-4xl md:text-6xl lg:text-8xl text-white mb-6 inline-block flex items-center justify-center">
                     <TypeAnimation
+                        className='item-center text-center'
                         sequence={[
                             500,
                             'I am a Developer.',

@@ -66,7 +66,7 @@ function Header() {
                 <div className="flex flex-col justify-center items-center">
                     <Reveal>
                         <div className='py-2'>
-                            <p className="text-3xl md:text-5xl font-display2">Education</p>
+                            <p className="text-3xl md:text-5xl font-display2 text-gray-700">Education</p>
                         </div>
                     </Reveal>
                     <div className="pt-3">
@@ -75,7 +75,7 @@ function Header() {
                 </div>
                 <div className="flex flex-col justify-center items-center pt-12 w-full sc:w-160 sc:px-4">
                     <Reveal>
-                    <p className="text-lg md:text-xl text-center">Here you will find more information about my educational background, including where I studied and what I studied.</p>
+                    <p className="text-lg md:text-xl text-center text-slate-600 font-medium">Here you will find more information about my educational background, including where I studied and what I studied.</p>
                     </Reveal>
                 </div>
             </div>

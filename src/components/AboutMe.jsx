@@ -21,7 +21,7 @@ function Header() {
             <div>
                 <div className="flex flex-col justify-center items-center">
                     <Reveal>
-                        <p className="text-3xl md:text-5xl font-display2">ABOUT ME</p>
+                        <p className="text-3xl md:text-5xl font-display2 text-slate-700">ABOUT ME</p>
                     </Reveal>
                     <div className="pt-3">
                         <div className="bg-gree w-8 h-1 mt-2 rounded-full"></div>
@@ -29,7 +29,7 @@ function Header() {
                 </div>
                 <div className="flex flex-col justify-center items-center pt-12 w-full sc:w-160 sc:px-4">
                     <Reveal>
-                        <p className="text-lg md:text-xl text-center">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+                        <p className="text-lg md:text-xl text-center text-slate-600 font-medium">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
                     </Reveal>
                 </div>
             </div>
@@ -61,15 +61,15 @@ function GetToKnowMe() {
                 <p className="text-lg md:text-2xl font-display2">GET TO KNOW ME!</p>
                 <div className="pt-4">
                     <Reveal color='#110610'>
-                        <p className="text-base md:text-xl">I’m a <strong className="text-gray-700">Developer</strong> building and managing different projects and applications that leads to the success of overall product. Check out some of my <strong className="text-gray-700">projects</strong> in the project section.</p>
+                        <p className="text-base md:text-lg">I’m a <strong className="text-gray-700">Developer</strong> building and managing different projects and applications that leads to the success of overall product. Check out some of my <strong className="text-gray-700">projects</strong> in the project section.</p>
                     </Reveal>
                     <br />
                     <Reveal color='#110610'>
-                    <p className="text-base md:text-xl">I also share some of my personal or <strong className="text-gray-700">professional</strong> achievements over the year. Feel free to connect or Follow me on my <a href="https://www.linkedin.com/in/shabose/" className="text-blue-500 underline hover:text-blue-900"><strong>Linkedin</strong></a> and <a href="https://www.instagram.com/shashwat_1712/" className="text-pink-500 underline hover:text-pink-900"><strong>Instagram</strong></a> where I post my achievements on development and programming.</p>
+                    <p className="text-base md:text-lg">I also share some of my personal or <strong className="text-gray-700">professional</strong> achievements over the year. Feel free to connect or Follow me on my <a href="https://www.linkedin.com/in/shabose/" className="text-blue-500 underline hover:text-blue-900"><strong>Linkedin</strong></a> and <a href="https://www.instagram.com/shashwat_1712/" className="text-pink-500 underline hover:text-pink-900"><strong>Instagram</strong></a> where I post my achievements on development and programming.</p>
                     </Reveal >
                     <br />
                     <Reveal color='#110610'>
-                    <p className="text-base md:text-xl">I'm <strong className="text-gray-700">open to Job opportunities</strong> where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
+                    <p className="text-base md:text-lg">I'm <strong className="text-gray-700">open to Job opportunities</strong> where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
                     </Reveal>
                 </div>
                     <div className="pt-16 flex justify-center md:justify-start">
