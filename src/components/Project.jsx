@@ -3,7 +3,7 @@ import T1 from '../assets/background/tiles1.svg';
 import project1 from '../assets/project/LapPro1.png';
 import { ProjectContext } from '../context/ProjextContext';
 import { Reveal } from './utils/Reveal';
-
+import { Button } from "@material-tailwind/react";
 
 export const Project = () => {
 
@@ -64,9 +64,14 @@ function ProjectDetails(){
                 </Reveal>
                 <div className="pt-8 flex justify-center md:justify-start">
                     <Reveal color='#cccc00'>
-                        <div className='py-3'>
+                        {/* <div className='py-3'>
                             <a href={link} className='bg-purple-800 text-white font-bold py-2 md:py-4 px-4 rounded-lg text-lg transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'>Repository</a>
-                        </div>
+                        </div> */}
+                        <a href={link} target="_blank" rel="noopener noreferrer">
+                            <div className="flex gap-4">
+                                <Button className='text-white w-32 h-14 bg-purple-800 md:hover:bg-blue-600 font-bold text-lg duration-300 delay-100' variant="filled">Repository</Button>
+                            </div>
+                        </a>
                     </Reveal>
                 </div>
             </div>

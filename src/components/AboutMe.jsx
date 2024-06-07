@@ -2,6 +2,7 @@ import {HashLink as Link} from "react-router-hash-link"
 import {SkillContext} from '../context/SkillContext.js'
 import { useContext } from "react";
 import { Reveal } from "./utils/Reveal.tsx";
+import { Button } from "@material-tailwind/react";
 
 
 export const AboutMe = () => {
@@ -75,9 +76,11 @@ function GetToKnowMe() {
                     <div className="pt-16 flex justify-center md:justify-start">
                         <Reveal>
                             <div className="py-6">
-                                <Link to="#Contact" className="bg-purple-500 text-white font-bold py-4 px-16 rounded-lg text-xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" smooth>
-                                    Contact
-                                </Link>
+                                <Button className='text-white w-full h-14 bg-purple-800 md:hover:bg-blue-600 font-bold text-lg duration-300 delay-100' variant="filled">
+                                    <Link to="#Contact" className="bg-purple-500 text-white font-bold py-4 px-16 rounded-lg text-xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" smooth>
+                                        Contact
+                                    </Link>
+                                </Button>
                             </div>
                         </Reveal>
                     </div>
