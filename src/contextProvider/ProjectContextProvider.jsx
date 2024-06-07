@@ -17,7 +17,7 @@ export const ProjectDetails = () =>{
         {
             pro_name: "Spending Tracker",
             image: project1,
-            desc: "It is used to track spending record along with ability track spending on any particular items with any given date range. It helps user to control expenditure of the user.",
+            desc: "It is used to track spending records and the ability to track spending on any particular items with any given date range. It helps user to control expenditure of the user.",
             url :"https://github.com/theboss17121999/Spending_Tracker"
         },
         // {
