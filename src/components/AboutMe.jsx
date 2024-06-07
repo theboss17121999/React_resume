@@ -77,7 +77,7 @@ function GetToKnowMe() {
                         <Reveal>
                             <div className="py-6">
                                 <Button className='text-white w-full h-14 bg-purple-800 md:hover:bg-blue-600 font-bold text-lg duration-300 delay-100' variant="filled">
-                                    <Link to="#Contact" className="bg-purple-500 text-white font-bold py-4 px-16 rounded-lg text-xl transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" smooth>
+                                    <Link to="#Contact" className="bg-purple-500 font-bold py-4 px-16 rounded-lg text-xl hover:bg-indigo-500 duration-300 delay-100" smooth>
                                         Contact
                                     </Link>
                                 </Button>
