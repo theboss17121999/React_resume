@@ -28,7 +28,7 @@ export const Reveal1 = ({ children, width = "fit-content" , y_axis = 75 , x_axis
                 }}
                 initial="hidden"
                 animate={mainControl}
-                transition={{ duration: 0.5, delay: 0.25 }}
+                transition={{ duration: 0.5, delay: 0.25, ease: "linear" , type: "tween"}}
             >
                 {children}
             </motion.div>
