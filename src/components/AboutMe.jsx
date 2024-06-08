@@ -3,6 +3,7 @@ import {SkillContext} from '../context/SkillContext.js'
 import { useContext } from "react";
 import { Reveal } from "./utils/Reveal.tsx";
 import { Button } from "@material-tailwind/react";
+import { Reveal1 } from "./utils/Reveal1.tsx";
 
 
 export const AboutMe = () => {
@@ -108,11 +109,10 @@ function Skills() {
 const StringInBox = ({ text }) => {
     return (
         <div className="inline-block ">
-            <Reveal duration={0.25}>
-                <div className="inline-block bg-gray-200 text-gray-600 rounded-lg py-3 px-4 mr-4 mb-4 text-sm md:text-base font-semibold lg:hover:bg-purple-500 lg:hover:text-white lg:duration-300">
+            <Reveal1><div className="inline-block bg-gray-200 text-gray-600 rounded-lg py-3 px-4 mr-4 mb-4 text-sm md:text-base font-semibold lg:hover:bg-purple-500 lg:hover:text-white lg:duration-300">
                     {text.trim()}
                 </div>
-            </Reveal>
+            </Reveal1>
         </div>
     );
 };
