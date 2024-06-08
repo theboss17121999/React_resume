@@ -98,7 +98,7 @@ function Skills() {
                 <p className="text-lg md:text-2xl font-display2">My SKILLS</p>
                 <div className="mt-4 pt-4 ">
                 {tech.map((t, index) => (
-                    <StringInBox key={index} text={t} />
+                    <StringInBox key={index} num={index} text={t} />
                 ))}
                 </div>
             </div>
@@ -106,10 +106,36 @@ function Skills() {
     );
 }
 
-const StringInBox = ({ text }) => {
+const StringInBox = ({ num, text }) => {
+    let y_axis, x_axis ;
+
+    switch (num % 5) {
+        case 0:
+            y_axis = 75;
+            x_axis = 75;
+            break;
+        case 1:
+            y_axis = -75;
+            x_axis = -75;
+            break;
+        case 2:
+            y_axis = 100;
+            x_axis = -100;
+            break;
+        case 3:
+            y_axis = -100;
+            x_axis = 100;
+            break;
+        case 4:
+            y_axis = 0;
+            x_axis = 100;
+            break;
+    }
+
     return (
         <div className="inline-block ">
-            <Reveal1><div className="inline-block bg-gray-200 text-gray-600 rounded-lg py-3 px-4 mr-4 mb-4 text-sm md:text-base font-semibold lg:hover:bg-purple-500 lg:hover:text-white lg:duration-300">
+           <Reveal1 y_axis={y_axis} x_axis={x_axis}>
+                <div className="inline-block bg-gray-200 text-gray-600 rounded-lg py-3 px-4 mr-4 mb-4 text-sm md:text-base font-semibold lg:hover:bg-purple-500 lg:hover:text-white lg:duration-300">
                     {text.trim()}
                 </div>
             </Reveal1>
