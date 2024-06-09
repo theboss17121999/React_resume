@@ -22,7 +22,7 @@ export const AboutMe = () => {
             {
                 name: 'ABOUT ME',
                 link: '#AboutMe',
-                color: 'text-red-500',
+                color: 'text-green-500',
             },
             {
                 name: 'EDUCATION',

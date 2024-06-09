@@ -33,7 +33,7 @@ export const ProjectDetails = () =>{
             {
                 name: 'PROJECTS',
                 link: '#Project',
-                color:'text-red-500',
+                color:'text-green-500',
             },
             {
                 name: 'CONTACT',
