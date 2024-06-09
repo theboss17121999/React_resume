@@ -18,7 +18,7 @@ export const Intro = ({ title }) => {
             {
                 name: 'HOME',
                 link: '#Home',
-                color: 'text-red-500',
+                color: 'text-green-500',
             },
             {
                 name: 'ABOUT ME',

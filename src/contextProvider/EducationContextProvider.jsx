@@ -1,6 +1,6 @@
-import KV from '../assets/educationLogo/KV.png';
-import DPS from '../assets/educationLogo/dps.png';
-import CU from '../assets/educationLogo/CU.png';
+import KV from '../assets/educationLogo/kv.png';
+import DPS from '../assets/educationLogo/DPS.png';
+import CU from '../assets/educationLogo/Cu.png';
 import { Education } from '../components/Education';
 import { EducationContext } from '../context/EducationContext';
 import { Reveal } from '../components/utils/Reveal';
@@ -27,7 +27,7 @@ export const EducationDetails = () =>{
             {
                 name: 'EDUCATION',
                 link: '#Education',
-                color: 'text-red-500',
+                color: 'text-green-500',
             },
             {
                 name: 'PROJECTS',
