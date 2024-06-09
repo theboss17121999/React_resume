@@ -27,7 +27,7 @@ export const EducationDetails = () =>{
             {
                 name: 'EDUCATION',
                 link: '#Education',
-                color: 'text-purple-700',
+                color: 'text-red-500',
             },
             {
                 name: 'PROJECTS',
