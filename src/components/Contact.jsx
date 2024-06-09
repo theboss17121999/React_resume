@@ -32,7 +32,7 @@ export const Contact = () => {
             {
                 name: 'CONTACT',
                 link: '#Contact',
-                color: 'text-purple-700',
+                color: 'text-red-500',
             },
         ]);
     };
