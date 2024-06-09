@@ -61,12 +61,12 @@ export const Intro = ({ title }) => {
 
     return (
         <>
-            <div ref={aboutMeRef}></div>
+            <div ref={aboutMeRef} className='top-0 z-52'></div>
             <div className="relative h-smScreen lg:h-screen bg-cover bg-center overflow-hidden bg-bg2 md:bg-bg1">
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                     <Reveal>
-                        <div ref={aboutMeRef} className="font-display2 text-4xl text-white mb-4">Hi, My name is</div>
+                        <div className="font-display2 text-4xl text-white mb-4">Hi, My name is</div>
                     </Reveal>
                     <Reveal>
                         <div className="font-cursive1 text-6xl md:text-8xl text-yellow-500 mb-8 backdrop-blur-sm md:backdrop-blur-none inline-block flex items-center justify-center">{title}.</div>
