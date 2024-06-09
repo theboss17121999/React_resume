@@ -1,9 +1,59 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Reveal } from "./utils/Reveal";
+import { useSetRecoilState } from "recoil";
+import { navbarAtom } from "../store/navbar/navbar";
 
 export const Contact = () => {
+    const setNavbar = useSetRecoilState(navbarAtom);
+    const aboutMeRef = useRef(null);
+
+    const updateNavbar = () => {
+        setNavbar([
+            {
+                name: 'HOME',
+                link: '#Home',
+                color: 'text-black',
+            },
+            {
+                name: 'ABOUT ME',
+                link: '#AboutMe',
+                color: 'text-black',
+            },
+            {
+                name: 'EDUCATION',
+                link: '#Education',
+                color: 'text-black',
+            },
+            {
+                name: 'PROJECTS',
+                link: '#Project',
+                color: 'text-black',
+            },
+            {
+                name: 'CONTACT',
+                link: '#Contact',
+                color: 'text-purple-700',
+            },
+        ]);
+    };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    updateNavbar();
+                }
+            });
+        });
+
+        observer.observe(aboutMeRef.current);
+
+        return () => {
+            observer.unobserve(aboutMeRef.current);
+        };
+    }, []);
     return (
-        <div className="bg-purple-500 ">
+        <div ref={aboutMeRef} className="bg-purple-500 ">
             <LetsTalk />
         </div>
     );

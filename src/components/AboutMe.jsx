@@ -1,19 +1,74 @@
-import {HashLink as Link} from "react-router-hash-link"
-import {SkillContext} from '../context/SkillContext.js'
-import { useContext } from "react";
-import { Reveal } from "./utils/Reveal.tsx";
-import { Button } from "@material-tailwind/react";
-import { Reveal1 } from "./utils/Reveal1.tsx";
-
+import { useEffect, useRef } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+import { SkillContext } from '../context/SkillContext.js';
+import { useContext } from 'react';
+import { Reveal } from './utils/Reveal.tsx';
+import { Button } from '@material-tailwind/react';
+import { Reveal1 } from './utils/Reveal1.tsx';
+import { useSetRecoilState } from 'recoil';
+import { navbarAtom } from '../store/navbar/navbar.jsx';
 
 export const AboutMe = () => {
+    const setNavbar = useSetRecoilState(navbarAtom);
+    const aboutMeRef = useRef(null);
+
+    const updateNavbar = () => {
+        setNavbar([
+            {
+                name: 'HOME',
+                link: '#Home',
+                color: 'text-black',
+            },
+            {
+                name: 'ABOUT ME',
+                link: '#AboutMe',
+                color: 'text-purple-700',
+            },
+            {
+                name: 'EDUCATION',
+                link: '#Education',
+                color: 'text-black',
+            },
+            {
+                name: 'PROJECTS',
+                link: '#Project',
+                color: 'text-black',
+            },
+            {
+                name: 'CONTACT',
+                link: '#Contact',
+                color: 'text-black',
+            },
+        ]);
+    };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    updateNavbar();
+                }
+            });
+        });
+
+        observer.observe(aboutMeRef.current);
+
+        return () => {
+            observer.unobserve(aboutMeRef.current);
+        };
+    }, []);
+
     return (
-        <div className="flex justify-center py-24 w-full">
-            <div className="w-full sc:w-170">
-                <Header />
-                <AboutMeDetails />
+        <>
+            <div className="flex justify-center py-24 w-full">
+                <div className="w-full sc:w-170">
+                    <div ref={aboutMeRef}>
+                        <Header />
+                    </div>
+                    <AboutMeDetails />
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

@@ -4,8 +4,60 @@ import CU from '../assets/educationLogo/CU.png';
 import { Education } from '../components/Education';
 import { EducationContext } from '../context/EducationContext';
 import { Reveal } from '../components/utils/Reveal';
+import { useSetRecoilState } from 'recoil';
+import { navbarAtom } from '../store/navbar/navbar';
+import { useEffect, useRef } from 'react';
 
 export const EducationDetails = () =>{
+    const setNavbar = useSetRecoilState(navbarAtom);
+    const aboutMeRef = useRef(null);
+
+    const updateNavbar = () => {
+        setNavbar([
+            {
+                name: 'HOME',
+                link: '#Home',
+                color: 'text-black',
+            },
+            {
+                name: 'ABOUT ME',
+                link: '#AboutMe',
+                color: 'text-black',
+            },
+            {
+                name: 'EDUCATION',
+                link: '#Education',
+                color: 'text-purple-700',
+            },
+            {
+                name: 'PROJECTS',
+                link: '#Project',
+                color: 'text-black',
+            },
+            {
+                name: 'CONTACT',
+                link: '#Contact',
+                color: 'text-black',
+            },
+        ]);
+    };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    updateNavbar();
+                }
+            });
+        });
+
+        observer.observe(aboutMeRef.current);
+
+        return () => {
+            observer.unobserve(aboutMeRef.current);
+        };
+    }, []);
+
     const Edu_details = [
         {
             school : "Kendriya Vidyalaya",
@@ -42,7 +94,7 @@ export const EducationDetails = () =>{
     return (
         <div className="bg-white flex justify-center py-24 w-full">
             <div className="w-full sc:w-170">
-            <div className="flex justify-center">
+            <div ref={aboutMeRef} className="flex justify-center">
                     <Header />
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-16 py-16'>

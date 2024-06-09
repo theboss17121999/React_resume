@@ -4,31 +4,13 @@ import { NavBarContext } from "../context/NavBarContext";
 import shashwat from '../assets/Intro/shashwat.jpg';
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { Reveal } from "./utils/Reveal";
+import { useRecoilValue } from "recoil";
+import { navbarAtom } from "../store/navbar/navbar";
 
 export const NavBar= () => {
-  const navbar =[
-    {
-      name: "HOME",
-      link: "#Home"
-    },
-    {
-      name: "ABOUT ME",
-      link: "#AboutMe"
-    },
-    {
-      name: "EDUCATION",
-      link: "#Education"
-    },
-    {
-      name: "PROJECTS",
-      link: "#Project"
-    },
-    {
-      name: "CONTACT",
-      link: "#Contact"
-    },
-  ]
 
+  const navbar = useRecoilValue(navbarAtom);
+  
   const [isClick, setIsClick] = useState(false);
 
   const toggleNavBar = () => {
@@ -146,13 +128,14 @@ export const NavBar= () => {
 function NavButtons({block , toggleNavBar ,setIsClick ,isClick }) {
   const name = useContext(NavBarContext).name;
   const link = useContext(NavBarContext).link;
+  const color = useContext(NavBarContext).color;
   return (
     <>
       <div>
         <button className='w-full text-right pr-8' onClick={toggleNavBar}>
           <Link
             to={link}
-            className={`lg:p-2 font-mono font-semibold ${
+            className={`lg:p-2 font-mono font-semibold ${color} ${
               block ? "text-black block hover:text-purple-700" : "text-black hover:text-purple-700 md:text-sm lg:text-base"
             }`}
             smooth

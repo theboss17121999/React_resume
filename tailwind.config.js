@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: {
-    files: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-    transform: (content) => content.replace(/taos:/g, ''),
+    files: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}']
   },
   theme: {
     extend: {
@@ -54,12 +53,4 @@ export default {
       'blood': ['blood', 'sans-serif'],
     },
   },
-  plugins: [
-    require('taos/plugin'),
-  ],
-  safelist: [
-    '!duration-[0ms]',
-    '!delay-[0ms]',
-    'html.js :where([class*="taos:"]:not(.taos-init))',
-  ],
 };
