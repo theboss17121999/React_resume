@@ -102,7 +102,7 @@ function AboutMeDetails() {
                     <GetToKnowMe />
                 </div>
                 <div>
-                    <SkillContext.Provider value={["Mongo DB", "Express", "React", "NodeJs", "Tailwind", "Java", "Python", "HTML", "CSS", "SQL", "Terminal", "Responsive Design", "GIT", "GitHub", "PostMan", "Problem Solving","Data Structure and Algorithm"]}>
+                    <SkillContext.Provider value={["Mongo DB", "Express", "React", "NodeJs", "Tailwind", "Java", "JavaScript", "TypeScript", "Python", "HTML", "CSS", "SQL", "Terminal", "Responsive Design", "GIT", "GitHub", "PostMan", "Problem Solving","Data Structure and Algorithm"]}>
                         <Skills />
                     </SkillContext.Provider>
                 </div>
