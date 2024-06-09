@@ -60,58 +60,61 @@ export const Intro = ({ title }) => {
     }, []);
 
     return (
-        <div className="relative h-smScreen lg:h-screen bg-cover bg-center overflow-hidden bg-bg2 md:bg-bg1">
-            <div className="absolute inset-0 bg-black opacity-50"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                <Reveal>
-                    <div ref={aboutMeRef} className="font-display2 text-4xl text-white mb-4">Hi, My name is</div>
-                </Reveal>
-                <Reveal>
-                    <div className="font-cursive1 text-6xl md:text-8xl text-yellow-500 mb-8 backdrop-blur-sm md:backdrop-blur-none inline-block flex items-center justify-center">{title}.</div>
-                </Reveal>
-                <div className="font-handwriting text-4xl md:text-6xl lg:text-8xl text-white mb-6 inline-block flex items-center justify-center">
-                    <TypeAnimation
-                        className='item-center text-center'
-                        sequence={[
-                            500,
-                            'I am a Developer.',
-                            2000,
-                            'I make Web Applications.',
-                            2000,
-                            'I make Java Applications.',
-                            2000,
-                            'I have expertise in Data Structures and Algorithms.',
-                            2000,
-                            'I specialize in Tailwind CSS and Responsive Design.',
-                            2000,
-                            'I solve Complex Problems.',
-                            2000,
-                            'I am passionate about Clean Code.',
-                            2000,
-                            'I am always Learning new Skills.',
-                            2000,
-                            'I enjoy Learning new Technologies.',
-                            2000,
-                            'I stay updated with Industry Trends.',
-                            2000,
-                            'I strive to create efficient and scalable solutions.',
-                            2000
-                        ]}
-                        wrapper="span"
-                        speed={70}
-                        repeat={Infinity}
-                    />
-                </div>
-                <div className='pt-10'>
+        <>
+            <div ref={aboutMeRef}></div>
+            <div className="relative h-smScreen lg:h-screen bg-cover bg-center overflow-hidden bg-bg2 md:bg-bg1">
+                <div className="absolute inset-0 bg-black opacity-50"></div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                     <Reveal>
-                        <div className='p-5'>
-                            <BigButton text={"PROJECTS"} />
-                        </div>
+                        <div ref={aboutMeRef} className="font-display2 text-4xl text-white mb-4">Hi, My name is</div>
                     </Reveal>
+                    <Reveal>
+                        <div className="font-cursive1 text-6xl md:text-8xl text-yellow-500 mb-8 backdrop-blur-sm md:backdrop-blur-none inline-block flex items-center justify-center">{title}.</div>
+                    </Reveal>
+                    <div className="font-handwriting text-4xl md:text-6xl lg:text-8xl text-white mb-6 inline-block flex items-center justify-center">
+                        <TypeAnimation
+                            className='item-center text-center'
+                            sequence={[
+                                500,
+                                'I am a Developer.',
+                                2000,
+                                'I make Web Applications.',
+                                2000,
+                                'I make Java Applications.',
+                                2000,
+                                'I have expertise in Data Structures and Algorithms.',
+                                2000,
+                                'I specialize in Tailwind CSS and Responsive Design.',
+                                2000,
+                                'I solve Complex Problems.',
+                                2000,
+                                'I am passionate about Clean Code.',
+                                2000,
+                                'I am always Learning new Skills.',
+                                2000,
+                                'I enjoy Learning new Technologies.',
+                                2000,
+                                'I stay updated with Industry Trends.',
+                                2000,
+                                'I strive to create efficient and scalable solutions.',
+                                2000
+                            ]}
+                            wrapper="span"
+                            speed={70}
+                            repeat={Infinity}
+                        />
+                    </div>
+                    <div className='pt-10'>
+                        <Reveal>
+                            <div className='p-5'>
+                                <BigButton text={"PROJECTS"} />
+                            </div>
+                        </Reveal>
+                    </div>
+                    <SocailSideBar />
                 </div>
-                <SocailSideBar />
             </div>
-        </div>
+        </>
     );
 };
 
