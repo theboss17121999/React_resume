@@ -29,7 +29,7 @@ export default {
       },
       screens: {
         'sc': '1280px',
-        'nv': '1198px'
+        'nv': '1199px'
       },
       fontSize: {
         extralarge: '19rem',
