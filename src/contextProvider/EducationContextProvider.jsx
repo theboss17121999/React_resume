@@ -35,6 +35,11 @@ export const EducationDetails = () =>{
                 color: 'text-black',
             },
             {
+                name: 'WORK EXPERIENCE',
+                link: '#Work',
+                color: 'text-black',
+            },
+            {
                 name: 'CONTACT',
                 link: '#Contact',
                 color: 'text-black',

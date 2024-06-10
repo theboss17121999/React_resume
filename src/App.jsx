@@ -6,6 +6,7 @@ import { Contact } from './components/Contact';
 import { ProjectDetails } from './contextProvider/ProjectContextProvider';
 import { EducationDetails } from './contextProvider/EducationContextProvider';
 import { useCallback } from 'react';
+import { WorkExp } from './components/WorkExp';
 
 function App() {
   const title = "Shashwat Bose";
@@ -31,6 +32,9 @@ function App() {
         </div>  
         <div id="Project">
           {renderProjectDetails()}
+        </div>
+        <div id="work">
+          <WorkExp />
         </div>
         <div id="Contact">
           {renderContact()}

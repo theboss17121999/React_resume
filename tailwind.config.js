@@ -29,6 +29,7 @@ export default {
       },
       screens: {
         'sc': '1280px',
+        'nv': '1198px'
       },
       fontSize: {
         extralarge: '19rem',

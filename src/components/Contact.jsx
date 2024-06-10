@@ -30,6 +30,11 @@ export const Contact = () => {
                 color: 'text-black',
             },
             {
+                name: 'WORK EXPERIENCE',
+                link: '#Work',
+                color: 'text-black',
+            },
+            {
                 name: 'CONTACT',
                 link: '#Contact',
                 color: 'text-green-500',

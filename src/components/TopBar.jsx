@@ -41,7 +41,7 @@ export const NavBar= () => {
                 <TopLogo />
               </div>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden nv:block">
               <div className="ml-4 flex items-center space-x-6 md:pr-3 lg:pr-6">
                 {navbar.map((navbar, index) => (
                   <div key={index} className="py-2">
@@ -52,7 +52,7 @@ export const NavBar= () => {
                 ))} 
               </div>
             </div>
-            <div className="md:hidden flex items-center pr-4">
+            <div className="nv:hidden flex items-center pr-4">
               <button
                 className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-purple-600"
                 onClick={toggleNavBar}
@@ -87,7 +87,7 @@ export const NavBar= () => {
           </div>
         </div>
         {isClick && (
-          <div className="md:hidden w-screen">
+          <div className="nv:hidden w-screen">
             <div className="pt-2 pb-3 space-y-3 divide-y divide-slate-300">
               <div className="border-solid border-1 slate-200">
 

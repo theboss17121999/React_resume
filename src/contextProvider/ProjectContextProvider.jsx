@@ -36,6 +36,11 @@ export const ProjectDetails = () =>{
                 color:'text-green-500',
             },
             {
+                name: 'WORK EXPERIENCE',
+                link: '#Work',
+                color: 'text-black',
+            },
+            {
                 name: 'CONTACT',
                 link: '#Contact',
                 color: 'text-black',
