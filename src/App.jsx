@@ -33,7 +33,7 @@ function App() {
         <div id="Project">
           {renderProjectDetails()}
         </div>
-        <div id="work">
+        <div id="Work">
           <WorkExp />
         </div>
         <div id="Contact">
