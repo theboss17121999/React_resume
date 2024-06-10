@@ -78,7 +78,7 @@ function Header() {
             <div>
                 <div className="flex flex-col justify-center items-center">
                     <Reveal>
-                        <p className="text-3xl md:text-5xl font-display2 text-slate-700">Work Experince</p>
+                        <p className="text-3xl md:text-5xl font-display2 text-slate-700">Work Experience</p>
                     </Reveal>
                     <div className="pt-3">
                         <div className="bg-gree w-8 h-1 mt-2 rounded-full"></div>
