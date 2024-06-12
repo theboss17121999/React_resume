@@ -2,6 +2,7 @@ import { useSetRecoilState } from "recoil";
 import { Reveal } from "./utils/Reveal";
 import { navbarAtom } from "../store/navbar/navbar";
 import { useEffect, useRef } from "react";
+import { Header } from "./utils/Header";
 
 export const WorkExp = () => {
     const setNavbar = useSetRecoilState(navbarAtom);
@@ -62,7 +63,7 @@ export const WorkExp = () => {
         <>
             <div className="py-24">
                 <div ref={aboutMeRef}>
-                    <Header />
+                    <Header title="Work Experience">Here you can find more information about me, including my work experience, the domain I am working in, and the skill sets I use in my organization.</Header>
                 </div>
                 <div className="py-96">
 
@@ -70,26 +71,4 @@ export const WorkExp = () => {
             </div>
         </>
     )
-}
-
-function Header() {
-    return (
-        <div className="flex flex-col justify-center items-center px-4 md:px-0">
-            <div>
-                <div className="flex flex-col justify-center items-center">
-                    <Reveal>
-                        <p className="text-3xl md:text-5xl font-display2 text-slate-700">Work Experience</p>
-                    </Reveal>
-                    <div className="pt-3">
-                        <div className="bg-gree w-8 h-1 mt-2 rounded-full"></div>
-                    </div>
-                </div>
-                <div className="flex flex-col justify-center items-center pt-12 w-full sc:w-160 sc:px-4">
-                    <Reveal>
-                        <p className="text-lg md:text-xl text-center text-slate-600 font-medium">Here you can find more information about me, including my work experience, the domain I am working in, and the skill sets I use in my organization.</p>
-                    </Reveal>
-                </div>
-            </div>
-        </div>
-    );
 }

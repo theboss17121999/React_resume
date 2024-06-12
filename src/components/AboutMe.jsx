@@ -7,6 +7,7 @@ import { Button } from '@material-tailwind/react';
 import { Reveal1 } from './utils/Reveal1.tsx';
 import { useSetRecoilState } from 'recoil';
 import { navbarAtom } from '../store/navbar/navbar.jsx';
+import { Header } from './utils/Header.tsx';
 
 export const AboutMe = () => {
     const setNavbar = useSetRecoilState(navbarAtom);
@@ -68,7 +69,7 @@ export const AboutMe = () => {
             <div className="flex justify-center py-24 w-full">
                 <div className="w-full sc:w-170">
                     <div ref={aboutMeRef}>
-                        <Header />
+                        <Header title='About Me'>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology.</Header>
                     </div>
                     <AboutMeDetails />
                 </div>
@@ -76,28 +77,6 @@ export const AboutMe = () => {
         </>
     );
 };
-
-function Header() {
-    return (
-        <div className="flex flex-col justify-center items-center px-4 md:px-0">
-            <div>
-                <div className="flex flex-col justify-center items-center">
-                    <Reveal>
-                        <p className="text-3xl md:text-5xl font-display2 text-slate-700">ABOUT ME</p>
-                    </Reveal>
-                    <div className="pt-3">
-                        <div className="bg-gree w-8 h-1 mt-2 rounded-full"></div>
-                    </div>
-                </div>
-                <div className="flex flex-col justify-center items-center pt-12 w-full sc:w-160 sc:px-4">
-                    <Reveal>
-                        <p className="text-lg md:text-xl text-center text-slate-600 font-medium">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
-                    </Reveal>
-                </div>
-            </div>
-        </div>
-    );
-}
 
 function AboutMeDetails() {
     return (

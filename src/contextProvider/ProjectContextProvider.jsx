@@ -7,6 +7,7 @@ import { Reveal } from "../components/utils/Reveal";
 import { useSetRecoilState } from "recoil";
 import { navbarAtom } from "../store/navbar/navbar";
 import { useEffect, useRef } from "react";
+import { Header } from "../components/utils/Header";
 
 
 export const ProjectDetails = () =>{
@@ -88,7 +89,7 @@ export const ProjectDetails = () =>{
         <div className="bg-gray-100 flex justify-center pt-24 md:pb-16 w-full">
             <div className="w-full sc:w-170">
                 <div ref={aboutMeRef}>
-                    <Header />
+                    <Header title="Project">Here you will find more information about my educational background, including where I studied and the grades I achieved.</Header>
                 </div>
                 <div className="divide-y-4 divide-slate-200">
                     {details.map((details, index) => (
@@ -102,32 +103,5 @@ export const ProjectDetails = () =>{
             </div>
         </div>
         
-    );
-}
-
-function Header() {
-    return (
-        <div className="flex flex-col justify-center items-center px-4 md:px-0">
-            <div>
-                <div className="flex flex-col justify-center items-center">
-                    <Reveal>
-                        <div className="py-1">
-                            <h1 className="text-3xl md:text-5xl font-display2 text-gray-700">Projects</h1>
-                        </div>
-                    </Reveal>
-                    <div className="pt-3">
-                        <div className="bg-gree w-8 h-1 mt-2 rounded-full"></div>
-                    </div>
-                </div>
-                <div className="flex flex-col justify-center items-center pt-12 w-full sc:w-160 sc:px-4">
-                    <Reveal>
-                        <p className="text-lg md:text-xl text-center text-slate-600 font-medium">Here you will find more information about my educational background, including where I studied and the grades I achieved.</p>
-                    </Reveal>
-                </div>
-            </div>
-            <div className="pt-6 md:hidden">
-                <div className="bg-slate-200 w-screen h-1 mt-2 "></div>
-            </div>
-        </div>
     );
 }
