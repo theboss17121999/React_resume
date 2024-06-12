@@ -9,7 +9,34 @@ import { navbarAtom } from "../store/navbar/navbar";
 
 export const NavBar= () => {
 
-  const navbar = useRecoilValue(navbarAtom);
+  const navbar1 = useRecoilValue(navbarAtom);
+  const navbar = [
+    {
+      name: "HOME",
+      link: "#Home",
+      color: "text-black"
+    },
+    {
+      name: "ABOUT ME",
+      link: "#AboutMe",
+      color: "text-black"
+    },
+    {
+      name: "EDUCATION",
+      link: "#Education",
+      color: "text-black"
+    },
+    {
+      name: "PROJECTS",
+      link: "#Project",
+      color: "text-black"
+    },
+    {
+      name: "CONTACT",
+      link: "#Contact",
+      color: "text-black"
+    },
+  ]
   
   const [isClick, setIsClick] = useState(false);
 
