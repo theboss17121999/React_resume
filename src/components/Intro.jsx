@@ -36,11 +36,6 @@ export const Intro = ({ title }) => {
                 color: 'text-black',
             },
             {
-                name: 'WORK EXPERIENCE',
-                link: '#Work',
-                color: 'text-black',
-            },
-            {
                 name: 'CONTACT',
                 link: '#Contact',
                 color: 'text-black',
@@ -76,7 +71,7 @@ export const Intro = ({ title }) => {
                     <Reveal>
                         <div className="font-cursive1 text-6xl md:text-8xl text-yellow-500 mb-8 backdrop-blur-sm md:backdrop-blur-none inline-block flex items-center justify-center">{title}.</div>
                     </Reveal>
-                    <div className="font-handwriting text-4xl md:text-6xl lg:text-8xl text-white mb-6 inline-block flex items-center justify-center">
+                    <div className="font-handwriting text-5xl md:text-6xl lg:text-8xl text-white mb-6 inline-block flex items-center justify-center">
                         <TypeAnimation
                             className='item-center text-center'
                             sequence={[

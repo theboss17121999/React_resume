@@ -20,7 +20,7 @@ export const Reveal1 = ({ children, width = "fit-content" , y_axis = 75 , x_axis
     }, [inView, mainControl]);
 
     return (
-        <div ref={ref} style={{ position: "relative", width}}>
+        <div ref={ref} style={{ position: "relative", width ,overflow:"hidden"}}>
             <motion.div
                 variants={{
                     hidden: { opacity: 0,x: x_axis, y: y_axis },

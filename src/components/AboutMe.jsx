@@ -36,11 +36,6 @@ export const AboutMe = () => {
                 color: 'text-black',
             },
             {
-                name: 'WORK EXPERIENCE',
-                link: '#Work',
-                color: 'text-black',
-            },
-            {
                 name: 'CONTACT',
                 link: '#Contact',
                 color: 'text-black',
@@ -119,8 +114,8 @@ function GetToKnowMe() {
                     <div className="pt-16 flex justify-center md:justify-start">
                         <Reveal>
                             <div className="py-6">
-                                <Button className='text-white w-full h-14 bg-purple-800 md:hover:bg-blue-600 font-bold text-lg duration-300 delay-100' variant="filled">
-                                    <Link to="#Contact" className="bg-purple-500 font-bold py-4 px-16 rounded-lg text-xl hover:bg-indigo-500 duration-300 delay-100" smooth>
+                            <Button className='text-white w-52 h-14 bg-purple-500 md:hover:bg-blue-600 font-bold text-lg duration-300 delay-100' variant="filled">
+                                    <Link to="#Contact"  smooth>
                                         Contact
                                     </Link>
                                 </Button>
