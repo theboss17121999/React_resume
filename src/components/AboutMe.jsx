@@ -130,7 +130,7 @@ function GetToKnowMe() {
 function Skills() {
     const tech= useContext(SkillContext);
     return (
-        <div className="px-4 md:px-0">
+        <div className="px-4 md:px-0 overflow-hidden">
             <div>
                 <p className="text-lg md:text-2xl font-display2">My SKILLS</p>
                 <div className="mt-4 pt-4 ">
