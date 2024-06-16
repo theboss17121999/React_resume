@@ -1,6 +1,6 @@
 import React from "react";
 import '../../App.css';
-import cognizant from '../../assets/educationLogo/cognizant.svg';
+import cognizant from '../utils/assets/cognizant.svg';
 
 interface CardProps {
   title: string;
