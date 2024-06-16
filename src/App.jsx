@@ -33,9 +33,9 @@ function App() {
         <div id="Project">
           {renderProjectDetails()}
         </div>
-        {/* <div id="Work">
+        <div id="Work">
           <WorkExp />
-        </div> */}
+        </div>
         <div id="Contact">
           {renderContact()}
         </div>

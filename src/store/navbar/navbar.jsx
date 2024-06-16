@@ -24,6 +24,7 @@ export const navbarAtom = atom({
           link: "#Project",
           color: "text-black"
         },
+        { name: 'WORK EXPERIENCE', link: '#Work', color: 'text-black' },
         {
           name: "CONTACT",
           link: "#Contact",
