@@ -45,7 +45,7 @@ export const WorkExp = () => {
                         Here you can find more information about me, including my work experience, the domain I am working in, and the skill sets I use in my organization.
                     </Header>
                 </div>
-                <div className="py-24">
+                <div className="py-28">
                     <Work />
                 </div>
             </div>
@@ -102,7 +102,7 @@ function LongBar() {
     return (
         <>
             <div className="flex justify-center items-center">
-                <div className="w-2 md:w-2 bg-black h-24">
+                <div className="w-2 md:w-2 bg-black h-36">
                 </div>
             </div>
         </>
