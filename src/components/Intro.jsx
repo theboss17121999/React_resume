@@ -7,6 +7,7 @@ import { faLinkedin, faGithub, faFacebook, faInstagram } from '@fortawesome/free
 import { useSetRecoilState } from 'recoil';
 import { navbarAtom } from '../store/navbar/navbar.jsx';
 import { useEffect, useRef } from 'react';
+import { CustomButton } from './utils/CustomButton.jsx';
 
 export const Intro = ({ title }) => {
 
@@ -106,10 +107,8 @@ export const Intro = ({ title }) => {
                         />
                     </div>
                     <div className='pt-10'>
-                        <Reveal>
-                            <div className='p-5'>
-                                <BigButton text={"PROJECTS"} />
-                            </div>
+                        <Reveal overflow='null'>
+                            <CustomButton />
                         </Reveal>
                     </div>
                     <SocailSideBar />
