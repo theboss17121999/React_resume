@@ -1,18 +1,14 @@
-import '../../App.css'
+import '../../App.css';
 import { HashLink as Link } from 'react-router-hash-link';
 
-
-export const CustomButton = () =>{
+export const CustomButton = () => {
     return (
-        <>
-            <div class="level-up">
-                <span class="text">
-                    <Link to="#Project"  smooth>
-                        PROJECT
-                    </Link>
+        <Link to="#Project" smooth>
+            <div className="level-up">
+                <span className="text">
+                    PROJECT
                 </span>
             </div>
-            
-        </>
-    )
-}
+        </Link>
+    );
+};

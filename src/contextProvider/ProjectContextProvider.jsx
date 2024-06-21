@@ -4,46 +4,17 @@ import project2 from '../assets/project/LapPro2.png';
 import project3 from '../assets/project/hello.png';
 import { Project } from "../components/Project";
 import { Reveal } from "../components/utils/Reveal";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import { navbarAtom } from "../store/navbar/navbar";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { Header } from "../components/utils/Header";
+import { navbarAtomFamily } from "../store/navbar/navbarFamily";
+import { useUpdateNavBar } from "../Hooks/useUpdateNavBar";
 
 
 export const ProjectDetails = () =>{
-    const setNavbar = useSetRecoilState(navbarAtom);
     const aboutMeRef = useRef(null);
-
-    const updateNavbar = () => {
-        setNavbar([
-            {
-                name: 'HOME',
-                link: '#Home',
-                color: 'text-black',
-            },
-            {
-                name: 'ABOUT ME',
-                link: '#AboutMe',
-                color: 'text-black',
-            },
-            {
-                name: 'EDUCATION',
-                link: '#Education',
-                color: 'text-black',
-            },
-            {
-                name: 'PROJECTS',
-                link: '#Project',
-                color:'text-green-500',
-            },
-            { name: 'WORK EXPERIENCE', link: '#Work', color: 'text-black' },
-            {
-                name: 'CONTACT',
-                link: '#Contact',
-                color: 'text-black',
-            },
-        ]);
-    };
+    const updateNavbar = useUpdateNavBar(4);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -61,6 +32,29 @@ export const ProjectDetails = () =>{
         };
     }, []);
 
+    const renderHeader = useCallback(() =>  
+        <Header title="Project">Here you will find more information about my educational background, including where I studied and the grades I achieved.</Header>
+        , []
+    );
+    const renderProjectCard = useCallback(() =>
+            <ProjectCard />
+            ,[]
+    )
+    return (
+        <div className="bg-gray-100 flex justify-center pt-24 md:pb-16 w-full">
+            <div className="w-full sc:w-170">
+                <div ref={aboutMeRef}>
+                    {renderHeader()}
+                </div>
+                {renderProjectCard()}
+            </div>
+        </div>
+        
+    );
+}
+
+function ProjectCard () {
+    
     const details = [
         {
             pro_name: "Portfolio",
@@ -82,22 +76,16 @@ export const ProjectDetails = () =>{
         }
     ];
     return (
-        <div className="bg-gray-100 flex justify-center pt-24 md:pb-16 w-full">
-            <div className="w-full sc:w-170">
-                <div ref={aboutMeRef}>
-                    <Header title="Project">Here you will find more information about my educational background, including where I studied and the grades I achieved.</Header>
-                </div>
-                <div className="divide-y-4 divide-slate-200">
-                    {details.map((details, index) => (
-                        <div key={index} className="py-2">
-                            <ProjectContext.Provider value={details}>
-                                <Project  />
-                            </ProjectContext.Provider>
-                        </div>
-                    ))} 
-                </div>
+        <>
+            <div className="divide-y-4 divide-slate-200">
+                {details.map((details, index) => (
+                    <div key={index} className="py-2">
+                        <ProjectContext.Provider value={details}>
+                            <Project  />
+                        </ProjectContext.Provider>
+                    </div>
+                ))} 
             </div>
-        </div>
-        
-    );
+        </>
+    )
 }

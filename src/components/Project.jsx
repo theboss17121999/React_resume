@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useCallback, useContext } from 'react';
 import T1 from '../assets/background/tiles1.svg';
 import project1 from '../assets/project/LapPro1.png';
 import { ProjectContext } from '../context/ProjextContext';
@@ -7,11 +7,15 @@ import { Button } from "@material-tailwind/react";
 
 export const Project = () => {
 
+    const renderProject = useCallback (() =>
+        <Projects />
+    ,[]
+)
     
     return (
         <div className="">
             <div className="">
-                <Projects />
+                {renderProject()}
             </div>
         </div>
     );

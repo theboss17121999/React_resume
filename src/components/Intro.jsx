@@ -8,42 +8,14 @@ import { useSetRecoilState } from 'recoil';
 import { navbarAtom } from '../store/navbar/navbar.jsx';
 import { useEffect, useRef } from 'react';
 import { CustomButton } from './utils/CustomButton.jsx';
+import { useUpdateNavBar } from '../Hooks/useUpdateNavBar.jsx';
 
 export const Intro = ({ title }) => {
 
     const setNavbar = useSetRecoilState(navbarAtom);
     const aboutMeRef = useRef(null);
 
-    const updateNavbar = () => {
-        setNavbar([
-            {
-                name: 'HOME',
-                link: '#Home',
-                color: 'text-green-500',
-            },
-            {
-                name: 'ABOUT ME',
-                link: '#AboutMe',
-                color: 'text-black',
-            },
-            {
-                name: 'EDUCATION',
-                link: '#Education',
-                color: 'text-black',
-            },
-            {
-                name: 'PROJECTS',
-                link: '#Project',
-                color: 'text-black',
-            },
-            { name: 'WORK EXPERIENCE', link: '#Work', color: 'text-black' },
-            {
-                name: 'CONTACT',
-                link: '#Contact',
-                color: 'text-black',
-            },
-        ]);
-    };
+    const updateNavbar = useUpdateNavBar(1);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -73,7 +45,7 @@ export const Intro = ({ title }) => {
                     <Reveal>
                         <div className="font-cursive1 text-6xl md:text-8xl text-yellow-500 mb-8 backdrop-blur-sm md:backdrop-blur-none inline-block flex items-center justify-center">{title}.</div>
                     </Reveal>
-                    <div className="font-handwriting text-5xl md:text-6xl lg:text-8xl text-white mb-6 inline-block flex items-center justify-center">
+                    <div className="font-handwriting text-5xl md:text-6xl lg:text-8xl text-white mb-6 inline-block flex items-center justify-center px-20">
                         <TypeAnimation
                             className='item-center text-center'
                             sequence={[

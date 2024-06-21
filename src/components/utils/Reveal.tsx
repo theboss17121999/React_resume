@@ -23,7 +23,7 @@ export const Reveal = ({ children, width = "fit-content", color = "#15EA3C", dur
     }, [inView, mainControl, slideControl]);
 
     return (
-        <div ref={ref} style={{ position: "relative", width, overflow: {overflow} }}>
+        <div ref={ref} style={{ position: "relative", width, overflow }}>
             <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 75 },

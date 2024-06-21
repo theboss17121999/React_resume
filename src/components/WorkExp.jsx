@@ -1,25 +1,16 @@
 import { useSetRecoilState } from "recoil";
 import { Reveal } from "./utils/Reveal";
 import { navbarAtom } from "../store/navbar/navbar";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { Header } from "./utils/Header";
 import cognizant from '../assets/educationLogo/Logo_Cognizant.png';
 import { Card } from '../components/utils/Card.tsx';
+import { useUpdateNavBar } from "../Hooks/useUpdateNavBar.jsx";
 
 export const WorkExp = () => {
-    const setNavbar = useSetRecoilState(navbarAtom);
     const aboutMeRef = useRef(null);
 
-    const updateNavbar = () => {
-        setNavbar([
-            { name: 'HOME', link: '#Home', color: 'text-black' },
-            { name: 'ABOUT ME', link: '#AboutMe', color: 'text-black' },
-            { name: 'EDUCATION', link: '#Education', color: 'text-black' },
-            { name: 'PROJECTS', link: '#Project', color: 'text-black' },
-            { name: 'WORK EXPERIENCE', link: '#Work', color: 'text-green-500' },
-            { name: 'CONTACT', link: '#Contact', color: 'text-black' },
-        ]);
-    };
+    const updateNavbar = useUpdateNavBar(5);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -36,17 +27,19 @@ export const WorkExp = () => {
             observer.unobserve(aboutMeRef.current);
         };
     }, []);
-
+    const renderHeader = useCallback(() => <Header title="Work Experience">
+                                                Here you can find more information about me, including my work experience, the domain I am working in, 
+                                                and the skill sets I use in my organization.
+                                            </Header>, []);
+    const renderWork = useCallback(() => <Work />,[]);
     return (
         <>
             <div className="py-24">
                 <div ref={aboutMeRef}>
-                    <Header title="Work Experience">
-                        Here you can find more information about me, including my work experience, the domain I am working in, and the skill sets I use in my organization.
-                    </Header>
+                    {renderHeader()}
                 </div>
                 <div className="py-28">
-                    <Work />
+                    {renderWork()}
                 </div>
             </div>
         </>
@@ -61,12 +54,10 @@ function Work() {
             <div className="flex justify-center items-center">
                 <Reveal>
                     <Card title="Cognizant">
-                        <p>
-                            <ul>
-                                <li className="pb-2 font-bold">Programmer Analyst</li>
-                                <li>Cognizant Technology Solutions Corporation is an American multinational information technology services and consulting company.</li>
-                            </ul>
-                        </p>
+                        <ul>
+                            <li className="pb-2 font-bold">Programmer Analyst</li>
+                            <li>Cognizant Technology Solutions Corporation is an American multinational information technology services and consulting company.</li>
+                        </ul>
                     </Card>
                 </Reveal>
             </div>

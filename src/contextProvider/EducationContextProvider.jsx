@@ -8,41 +8,12 @@ import { useSetRecoilState } from 'recoil';
 import { navbarAtom } from '../store/navbar/navbar';
 import { useEffect, useRef } from 'react';
 import { Header } from '../components/utils/Header';
+import { useUpdateNavBar } from '../Hooks/useUpdateNavBar';
 
 export const EducationDetails = () =>{
-    const setNavbar = useSetRecoilState(navbarAtom);
     const aboutMeRef = useRef(null);
 
-    const updateNavbar = () => {
-        setNavbar([
-            {
-                name: 'HOME',
-                link: '#Home',
-                color: 'text-black',
-            },
-            {
-                name: 'ABOUT ME',
-                link: '#AboutMe',
-                color: 'text-black',
-            },
-            {
-                name: 'EDUCATION',
-                link: '#Education',
-                color: 'text-green-500',
-            },
-            {
-                name: 'PROJECTS',
-                link: '#Project',
-                color: 'text-black',
-            },
-            { name: 'WORK EXPERIENCE', link: '#Work', color: 'text-black' },
-            {
-                name: 'CONTACT',
-                link: '#Contact',
-                color: 'text-black',
-            },
-        ]);
-    };
+    const updateNavbar = useUpdateNavBar(3);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
