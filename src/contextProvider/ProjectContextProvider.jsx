@@ -1,6 +1,6 @@
 import { ProjectContext } from "../context/ProjextContext";
 import project1 from '../assets/project/LapPro1.png';
-import project2 from '../assets/project/LapPro2.png';
+import project2 from '../assets/project/LapPro3.png';
 import project3 from '../assets/project/hello.png';
 import { Project } from "../components/Project";
 import { Reveal } from "../components/utils/Reveal";
@@ -62,12 +62,12 @@ function ProjectCard () {
             desc: "It includes information about individuals, such as their education, projects, and contact details, as well as the skills they have acquired over the years.",
             url :"https://github.com/theboss17121999/React_resume"
         },
-        // {
-        //     pro_name: "Super Tic Tac Toe",
-        //     image: project1,
-        //     desc: "This is a game built using the MERN stack, where two players can challenge each other in a game of Super Tic Tac Toe. It demonstrates a wide range of essential MERN skills.",
-        //     url:"https://github.com/theboss17121999/SuperTicTacToe"
-        // },
+        {
+            pro_name: "Super Tic Tac Toe",
+            image: project2,
+            desc: "This is a game built using the MERN stack, where two players can challenge each other in a game of Super Tic Tac Toe. It demonstrates a wide range of essential MERN skills.",
+            url:"https://github.com/theboss17121999/SuperTicTacToe"
+        },
         {
             pro_name: "Spending Tracker",
             image: project1,
