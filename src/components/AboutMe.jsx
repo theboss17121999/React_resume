@@ -207,13 +207,15 @@ function Skills() {
         <div className="px-4 md:px-0 overflow-hidden">
             <div>
                 <p className="text-lg md:text-2xl font-display2">My SKILLS</p>
-                <div className="mt-4 pt-4 ">
-                    <InfiniteSlider1 />
-                    <br />
-                    <InfiniteSlider2 />
-                    <br />
-                    <InfiniteSlider3 />
-                </div>
+                <Reveal>
+                    <div className="mt-4 pt-4 ">
+                        <InfiniteSlider1 />
+                        <br />
+                        <InfiniteSlider2 />
+                        <br />
+                        <InfiniteSlider3 />
+                    </div>
+                </Reveal>
             </div>
         </div>
     );
