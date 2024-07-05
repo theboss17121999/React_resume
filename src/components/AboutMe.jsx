@@ -9,6 +9,114 @@ import { useSetRecoilState } from 'recoil';
 import { navbarAtom } from '../store/navbar/navbar.jsx';
 import { Header } from './utils/Header.tsx';
 import { useUpdateNavBar } from '../Hooks/useUpdateNavBar.jsx';
+import { 
+    SiMongodb, 
+    SiExpress,
+    SiReact,
+    SiTailwindcss,
+    SiJavascript,
+    SiTypescript,
+    SiMysql,
+    SiGnometerminal,
+    SiPostman
+} from "react-icons/si";
+
+import { 
+    FaNodeJs,
+    FaJava,
+    FaPython,
+    FaHtml5,
+    FaCss3Alt,
+    FaGitAlt,
+    FaGithub
+ } from "react-icons/fa";
+
+import {
+    FigmaLogoIcon,
+    FramerLogoIcon,
+    SketchLogoIcon,
+    TwitterLogoIcon,
+    GitHubLogoIcon,
+    VercelLogoIcon,
+    NotionLogoIcon,
+    DiscordLogoIcon,
+    InstagramLogoIcon,
+    LinkedInLogoIcon,
+  } from "@radix-ui/react-icons";
+
+  const LOGOS1 = [
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <SiMongodb className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Mongo DB</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <SiExpress className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Express</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <SiReact className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">React</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <FaNodeJs className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Node.js</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <SiTailwindcss className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Tailwind CSS</p>
+    </div>
+];
+
+const LOGOS2 = [
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <FaJava className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Java</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <SiJavascript className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">JavaScript</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <SiTypescript className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">TypeScript</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <FaPython className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Python</p>
+    </div>
+];
+
+const LOGOS3 = [
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <FaHtml5 className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">HTML5</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <FaCss3Alt className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">CSS3</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <SiMysql className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">MySQL</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <SiGnometerminal className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Terminal</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <FaGitAlt className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Git</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <FaGithub className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">GitHub</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[125px] mx-4'>
+        <SiPostman className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Postman</p>
+    </div>
+];
+
 
 export const AboutMe = () => {
     const aboutMeRef = useRef(null);
@@ -53,12 +161,7 @@ function AboutMeDetails() {
                     <GetToKnowMe />
                 </div>
                 <div>
-                    <SkillContext.Provider value={["Mongo DB", "Express", "React", "NodeJs", 
-                        "Tailwind", "Java", "JavaScript", "TypeScript", "Python", "HTML", "CSS", 
-                        "SQL", "Terminal", "Responsive Design", "GIT", "GitHub", "PostMan", 
-                        "Problem Solving","Data Structure and Algorithm"]}>
-                        <Skills />
-                    </SkillContext.Provider>
+                    <Skills />
                 </div>
             </div>
         </div>
@@ -100,15 +203,16 @@ function GetToKnowMe() {
 }
 
 function Skills() {
-    const tech= useContext(SkillContext);
     return (
         <div className="px-4 md:px-0 overflow-hidden">
             <div>
                 <p className="text-lg md:text-2xl font-display2">My SKILLS</p>
                 <div className="mt-4 pt-4 ">
-                {tech.map((t, index) => (
-                    <StringInBox key={index} num={index} text={t} />
-                ))}
+                    <InfiniteSlider1 />
+                    <br />
+                    <InfiniteSlider2 />
+                    <br />
+                    <InfiniteSlider3 />
                 </div>
             </div>
         </div>
@@ -151,3 +255,54 @@ const StringInBox = ({ num, text }) => {
         </div>
     );
 };
+
+
+function InfiniteSlider1() {
+    return (
+        <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
+        <div className="animate-infinite-slider flex w-[calc(125px*{LOGOS1.length * 4})]">
+          {[...Array(4)].map((_, i) => (
+            LOGOS1.map((logo, index) => (
+              <div key={`${i}-${index}`}>
+                {logo}
+              </div>
+            ))
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  function InfiniteSlider2() {
+    return (
+        <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
+        <div className="animate-infinite-slider1 flex w-[calc(125px*{LOGOS2.length * 4})]">
+          {[...Array(5)].map((_, i) => (
+            LOGOS2.map((logo, index) => (
+              <div key={`${i}-${index}`}>
+                {logo}
+              </div>
+            ))
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  function InfiniteSlider3() {
+    return (
+        <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
+        <div className="animate-infinite-slider flex w-[calc(125px*{LOGOS3.length * 4})]">
+          {[...Array(4)].map((_, i) => (
+            LOGOS3.map((logo, index) => (
+              <div key={`${i}-${index}`}>
+                {logo}
+              </div>
+            ))
+          ))}
+        </div>
+      </div>
+    );
+  }
+  
+  

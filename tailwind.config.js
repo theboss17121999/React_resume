@@ -5,6 +5,26 @@ export default {
   },
   theme: {
     extend: {
+      animation: {
+        "infinite-slider": "infiniteSlider 22s linear infinite",
+        "infinite-slider1": "infiniteSlider1 30s linear infinite",
+      },
+      keyframes: {
+        infiniteSlider: {
+          "0%": { transform: "translateX(0)" },
+          "100%": {
+            transform: "translateX(calc(-250px * 10))",
+          },
+        },
+        infiniteSlider1: {
+          "0%": {
+            transform: "translateX(calc(-250px * 10))",
+          },
+          "100%": { 
+            transform: "translateX(0)" 
+          },
+        },
+      },
       height: {
         'screen-and-full': 'max(h-screen, h-h-3/4)',
       },
