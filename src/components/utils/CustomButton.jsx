@@ -6,7 +6,7 @@ export const CustomButton = () => {
         <Link to="#Project" smooth>
             <div className="level-up">
                 <span className="text">
-                    PROJECT
+                    PROJECTS
                 </span>
             </div>
         </Link>
