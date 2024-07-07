@@ -261,7 +261,7 @@ const StringInBox = ({ num, text }) => {
 
 function InfiniteSlider1() {
     return (
-        <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
+        <div className="relative w-[calc(100vw-50px)] md:w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
         <div className="animate-infinite-slider flex w-[calc(125px*{LOGOS1.length * 4})]">
           {[...Array(2)].map((_, i) => (
             LOGOS1.map((logo, index) => (
@@ -277,9 +277,9 @@ function InfiniteSlider1() {
 
 function InfiniteSlider2() {
 return (
-    <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
+    <div className="relative w-[calc(100vw-50px)] md:w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
     <div className="animate-infinite-slider1 flex w-[calc(125px*{LOGOS2.length * 2})]">
-        {[...LOGOS2, ...LOGOS2].map((logo, index) => (
+        {[...LOGOS2, ...LOGOS2, ...LOGOS2].map((logo, index) => (
         <div key={index}>
             {logo}
         </div>
@@ -291,7 +291,7 @@ return (
 
   function InfiniteSlider3() {
     return (
-        <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
+        <div className="relative w-[calc(100vw-50px)] md:w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
         <div className="animate-infinite-slider flex w-[calc(125px*{LOGOS3.length * 4})]">
           {[...Array(2)].map((_, i) => (
             LOGOS3.map((logo, index) => (

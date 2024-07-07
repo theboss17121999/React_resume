@@ -7,7 +7,7 @@ export default {
     extend: {
       animation: {
         "infinite-slider": "infiniteSlider 5s linear infinite",
-        "infinite-slider1": "infiniteSlider1 5s linear infinite",
+        "infinite-slider1": "infiniteSlider1 4s linear infinite",
       },
       keyframes: {
         infiniteSlider: {
