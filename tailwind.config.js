@@ -6,19 +6,19 @@ export default {
   theme: {
     extend: {
       animation: {
-        "infinite-slider": "infiniteSlider 22s linear infinite",
-        "infinite-slider1": "infiniteSlider1 30s linear infinite",
+        "infinite-slider": "infiniteSlider 5s linear infinite",
+        "infinite-slider1": "infiniteSlider1 5s linear infinite",
       },
       keyframes: {
         infiniteSlider: {
           "0%": { transform: "translateX(0)" },
           "100%": {
-            transform: "translateX(calc(-250px * 10))",
+            transform: "translateX(calc(-397px * 2))",
           },
         },
         infiniteSlider1: {
           "0%": {
-            transform: "translateX(calc(-250px * 10))",
+            transform: "translateX(calc(-264px * 2))",
           },
           "100%": { 
             transform: "translateX(0)" 

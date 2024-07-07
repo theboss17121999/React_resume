@@ -64,27 +64,31 @@ import {
     <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
         <SiTailwindcss className="text-slate-800 w-16 h-16" />
         <p className="text-center mt-2">Tailwind CSS</p>
+    </div>,
+    <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
+        <SiPostman className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">Postman</p>
     </div>
 ];
 
 const LOGOS2 = [
-    <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
-        <FaJava className="text-slate-800 w-16 h-16" />
-        <p className="text-center mt-2">Java</p>
+    <div className="slide flex flex-col items-center justify-center w-[100px] mx-4">
+      <FaJava className="text-slate-800 w-16 h-16" />
+      <p className="text-center mt-2">Java</p>
     </div>,
-    <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
-        <SiJavascript className="text-slate-800 w-16 h-16" />
-        <p className="text-center mt-2">JavaScript</p>
+    <div className="slide flex flex-col items-center justify-center w-[100px] mx-4">
+      <SiJavascript className="text-slate-800 w-16 h-16" />
+      <p className="text-center mt-2">JavaScript</p>
     </div>,
-    <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
-        <SiTypescript className="text-slate-800 w-16 h-16" />
-        <p className="text-center mt-2">TypeScript</p>
+    <div className="slide flex flex-col items-center justify-center w-[100px] mx-4">
+      <SiTypescript className="text-slate-800 w-16 h-16" />
+      <p className="text-center mt-2">TypeScript</p>
     </div>,
-    <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
-        <FaPython className="text-slate-800 w-16 h-16" />
-        <p className="text-center mt-2">Python</p>
-    </div>
-];
+    <div className="slide flex flex-col items-center justify-center w-[100px] mx-4">
+      <FaPython className="text-slate-800 w-16 h-16" />
+      <p className="text-center mt-2">Python</p>
+    </div>,
+  ];
 
 const LOGOS3 = [
     <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
@@ -110,10 +114,6 @@ const LOGOS3 = [
     <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
         <FaGithub className="text-slate-800 w-16 h-16" />
         <p className="text-center mt-2">GitHub</p>
-    </div>,
-    <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
-        <SiPostman className="text-slate-800 w-16 h-16" />
-        <p className="text-center mt-2">Postman</p>
     </div>
 ];
 
@@ -263,7 +263,7 @@ function InfiniteSlider1() {
     return (
         <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
         <div className="animate-infinite-slider flex w-[calc(125px*{LOGOS1.length * 4})]">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(2)].map((_, i) => (
             LOGOS1.map((logo, index) => (
               <div key={`${i}-${index}`}>
                 {logo}
@@ -275,27 +275,25 @@ function InfiniteSlider1() {
     );
   }
 
-  function InfiniteSlider2() {
-    return (
-        <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
-        <div className="animate-infinite-slider1 flex w-[calc(125px*{LOGOS2.length * 4})]">
-          {[...Array(6)].map((_, i) => (
-            LOGOS2.map((logo, index) => (
-              <div key={`${i}-${index}`}>
-                {logo}
-              </div>
-            ))
-          ))}
+function InfiniteSlider2() {
+return (
+    <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
+    <div className="animate-infinite-slider1 flex w-[calc(125px*{LOGOS2.length * 2})]">
+        {[...LOGOS2, ...LOGOS2].map((logo, index) => (
+        <div key={index}>
+            {logo}
         </div>
-      </div>
-    );
-  }
+        ))}
+    </div>
+    </div>
+);
+}
 
   function InfiniteSlider3() {
     return (
         <div className="relative w-[500px] overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,#fafaf9_0%,rgba(250,250,249,0)_100%)] after:content-['']">
         <div className="animate-infinite-slider flex w-[calc(125px*{LOGOS3.length * 4})]">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(2)].map((_, i) => (
             LOGOS3.map((logo, index) => (
               <div key={`${i}-${index}`}>
                 {logo}
