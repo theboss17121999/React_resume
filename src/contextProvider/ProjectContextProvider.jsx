@@ -33,7 +33,7 @@ export const ProjectDetails = () =>{
     }, []);
 
     const renderHeader = useCallback(() =>  
-        <Header title="Project">Here you will find more information about my educational background, including where I studied and the grades I achieved.</Header>
+        <Header title="Project">Here, you'll find detailed information about my projects, including repositories and other essential details for each one.</Header>
         , []
     );
     const renderProjectCard = useCallback(() =>
