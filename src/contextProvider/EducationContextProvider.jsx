@@ -1,6 +1,3 @@
-import KV from '../assets/educationLogo/kv.png';
-import DPS from '../assets/educationLogo/DPS.png';
-import CU from '../assets/educationLogo/Cu.png';
 import { Education } from '../components/Education';
 import { EducationContext } from '../context/EducationContext';
 import { Reveal } from '../components/utils/Reveal';
@@ -9,6 +6,7 @@ import { navbarAtom } from '../store/navbar/navbar';
 import { useEffect, useRef } from 'react';
 import { Header } from '../components/utils/Header';
 import { useUpdateNavBar } from '../Hooks/useUpdateNavBar';
+import { allEducationDetails } from '../details';
 
 export const EducationDetails = () =>{
     const aboutMeRef = useRef(null);
@@ -31,39 +29,7 @@ export const EducationDetails = () =>{
         };
     }, []);
 
-    const Edu_details = [
-        {
-            school : "Kendriya Vidyalaya",
-            year : "2005-2015",
-            marks: "9.0 cgpa",
-            bg_pic: KV,
-            bg_col: "bg-yellow-500",
-            col_text: "text-red-800",
-            detail: "I completed my basic education from class I to X, focusing on Science, Maths, Hindi, Socail Studies and English."
-        },
-        {
-            school : "Delhi Public School",
-            year : "2015-2017",
-            marks: "75%",
-            bg_pic: DPS,
-            bg_col: "bg-emerald-700",
-            col_text: "text-white",
-            detail: "I completed my foundational education from class XI to XII, focusing on Physics, Maths, Chemistry, and Computer Science."
-        },
-        {
-            school : "Chandigarh University",
-            year : "2017-2021",
-            marks: "6.9 cgpa",
-            bg_pic: CU,
-            bg_col: "bg-red-600",
-            col_text: "text-black",
-            detail: (
-              <>
-                  I completed my <strong>Bachelor's degree</strong> in Computer Science and other key subjects such as DSA, Programming, etc.
-              </>
-          )
-        }
-      ]; 
+    const Edu_details = allEducationDetails;
     return (
         <div className="bg-white flex justify-center py-24 w-full">
             <div className="w-full sc:w-170">

@@ -43,6 +43,7 @@ import {
     InstagramLogoIcon,
     LinkedInLogoIcon,
   } from "@radix-ui/react-icons";
+import { instagramLink, linkedinLink, skillArray, wantTochangeSkill } from '../details.js';
 
   const LOGOS1 = [
     <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
@@ -161,7 +162,9 @@ function AboutMeDetails() {
                     <GetToKnowMe />
                 </div>
                 <div>
-                    <Skills />
+                    <SkillContext.Provider value={skillArray}>
+                        <Skills />
+                    </SkillContext.Provider>
                 </div>
             </div>
         </div>
@@ -179,7 +182,7 @@ function GetToKnowMe() {
                     </Reveal>
                     <br />
                     <Reveal color='#110610'>
-                    <p className="text-base md:text-lg">I also share some of my personal or <strong className="text-gray-700">professional</strong> achievements over the year. Feel free to connect or Follow me on my <a href="https://www.linkedin.com/in/shabose/" className="text-blue-500 underline hover:text-blue-900"><strong>Linkedin</strong></a> and <a href="https://www.instagram.com/shashwat_1712/" className="text-pink-500 underline hover:text-pink-900"><strong>Instagram</strong></a> where I post my achievements on development and programming.</p>
+                    <p className="text-base md:text-lg">I also share some of my personal or <strong className="text-gray-700">professional</strong> achievements over the year. Feel free to connect or Follow me on my <a href={linkedinLink} className="text-blue-500 underline hover:text-blue-900"><strong>Linkedin</strong></a> and <a href={instagramLink} className="text-pink-500 underline hover:text-pink-900"><strong>Instagram</strong></a> where I post my achievements on development and programming.</p>
                     </Reveal >
                     <br />
                     <Reveal color='#110610'>
@@ -203,19 +206,29 @@ function GetToKnowMe() {
 }
 
 function Skills() {
+    const tech= useContext(SkillContext);
     return (
         <div className="px-4 md:px-0 overflow-hidden">
             <div>
                 <p className="text-lg md:text-2xl font-display2">My SKILLS</p>
-                <Reveal>
-                    <div className="mt-4 pt-4 ">
-                        <InfiniteSlider1 />
-                        <br />
-                        <InfiniteSlider2 />
-                        <br />
-                        <InfiniteSlider3 />
+                { wantTochangeSkill &&
+                    <div className="pt-6">
+                        {tech.map((t, index) => (
+                            <StringInBox key={index} num={index} text={t} />
+                        ))}
                     </div>
-                </Reveal>
+                }
+                { !wantTochangeSkill && 
+                    <Reveal>
+                        <div className="mt-4 pt-4 ">
+                            <InfiniteSlider1 />
+                            <br />
+                            <InfiniteSlider2 />
+                            <br />
+                            <InfiniteSlider3 />
+                        </div>
+                    </Reveal>
+                }
             </div>
         </div>
     );

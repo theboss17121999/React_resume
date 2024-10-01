@@ -7,9 +7,10 @@ import { ProjectDetails } from './contextProvider/ProjectContextProvider';
 import { EducationDetails } from './contextProvider/EducationContextProvider';
 import { useCallback } from 'react';
 import { WorkExp } from './components/WorkExp';
+import { name } from './details';
 
 function App() {
-  const title = "Shashwat Bose";
+  const title = name;
 
   const renderIntro = useCallback(() => <Intro title={title} />, [title]);
   const renderAboutMe = useCallback(() => <AboutMe />, []);
