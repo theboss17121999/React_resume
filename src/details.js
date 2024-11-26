@@ -1,6 +1,7 @@
 import KV from './assets/educationLogo/kv.png';
 import DPS from './assets/educationLogo/DPS.png';
 import CU from './assets/educationLogo/Cu.png';
+import IIT from './assets/educationLogo/IIT patna logo.png'
 
 export const name = "Shashwat Bose";
 
@@ -54,5 +55,14 @@ export const allEducationDetails = [
         bg_col: "bg-red-600",
         col_text: "text-black",
         detail: "I completed my Bachelor's degree in Computer Science and other key subjects such as DSA, Programming, etc."
+    },
+    {
+        school : "IIT Patna",
+        year : "2025-2027",
+        marks: "-- cgpa",
+        bg_pic: IIT,
+        bg_col: "bg-red-600",
+        col_text: "text-black",
+        detail: "Currently on going Master's degree in Business Administartion."
     }
   ];
