@@ -55,7 +55,7 @@ function Work() {
                 <Reveal>
                     <Card title="Cognizant">
                         <ul>
-                            <li className="pb-2 font-bold">Programmer Analyst</li>
+                            <li className="pb-2 font-bold">Associate</li>
                             <li>Cognizant Technology Solutions Corporation is an American multinational information technology services and consulting company.</li>
                         </ul>
                     </Card>
