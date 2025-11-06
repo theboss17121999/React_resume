@@ -4,6 +4,7 @@ import { navbarAtom } from "../store/navbar/navbar";
 import { useCallback, useEffect, useRef } from "react";
 import { Header } from "./utils/Header";
 import cognizant from '../assets/educationLogo/Logo_Cognizant.png';
+
 import { Card } from '../components/utils/Card.tsx';
 import { useUpdateNavBar } from "../Hooks/useUpdateNavBar.jsx";
 
