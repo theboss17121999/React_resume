@@ -3,7 +3,7 @@ import DPS from './assets/educationLogo/DPS.png';
 import CU from './assets/educationLogo/Cu.png';
 import IIT from './assets/educationLogo/IIT patna logo.png'
 
-export const name = "Shashwat Bose";
+export const name = "Shivam kumar";
 
 //Skill---------------------------------------------------------------------------------------------
 
