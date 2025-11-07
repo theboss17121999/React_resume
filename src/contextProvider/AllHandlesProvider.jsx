@@ -12,27 +12,22 @@ export const AllHandles = () =>{
     const allHandles = [
         {
             logo: linkedinLogo,
-            url: "https://www.linkedin.com/in/shabose/",
+            url: "https://www.linkedin.com/",
             alt: "Linkedin"
         },
         {
-            logo: leetcodeLogo,
-            url: "https://leetcode.com/u/shashwat1712/",
-            alt: "Leetcode"
-        },
-        {
             logo: githubLogo,
-            url: "https://github.com/theboss17121999",
+            url: "https://github.com/",
             alt: "Github"
         },
         {
             logo: instagramLogo,
-            url: "https://www.instagram.com/shashwat_1712/",
+            url: "https://www.instagram.com/",
             alt: "Instagram"
         },
         {
             logo: facebookLogo,
-            url: "https://www.facebook.com/profile.php?id=100009064223193",
+            url: "https://www.facebook.com/",
             alt: "Facebook"
         },
     ];

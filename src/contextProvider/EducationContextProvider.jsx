@@ -36,7 +36,7 @@ export const EducationDetails = () =>{
             <div ref={aboutMeRef} className="flex justify-center">
                     <Header title='Education' > Here you will find more information about my educational background, including where I studied and what I studied. </Header>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-4 gap-16 py-16'>
+                <div className='grid grid-cols-1 md:grid-cols-1 gap-16 py-16'>
                     {Edu_details.map((details, index) => (
                         <div key={index} className="py-2">
                             <EducationContext.Provider value={details}>

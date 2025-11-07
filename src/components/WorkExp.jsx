@@ -50,7 +50,7 @@ export const WorkExp = () => {
 function Work() {
     return (
         <>
-            <TimeCircle start="Start" end="MAY 2021" />
+            <TimeCircle start="Start" end="DEC 2021" />
             <LongBar />
             <div className="flex justify-center items-center">
                 <Reveal>

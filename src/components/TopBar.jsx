@@ -143,9 +143,8 @@ function TopLogo() {
     <a href="https://theboss17121999.github.io/React_resume/" className="group hover:bg-black">
       <Reveal>
         <div className="flex items-center">
-          <img src={shashwat} alt="shashwat" className="w-8 lg:w-12 rounded-full" />
           <div className="text-black text-lg lg:text-2xl font-display5 ml-2 group-hover:text-purple-700">
-            Shashwat Bose
+            Shivam kumar
           </div>
         </div>
       </Reveal>
