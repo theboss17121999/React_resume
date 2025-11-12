@@ -49,10 +49,10 @@ function LetsTalk() {
                 <Reveal>
                     <div className="text-lg md:text-xl lg:text-2xl text-white pt-4 md:pt-16 flex flex-col items-center ">
                         <button 
-                            onClick={() => window.location = 'mailto:shivamkr0507@gmail.com'} 
+                            onClick={() => window.location = 'mailto:shashwatbose1712@gmail.com'} 
                             className="underline underline-offset-8 hover:text-black transition duration-500 mt-4"
                         >
-                           shivamkr0507@gmail.com
+                            shashwatbose1712@gmail.com
                         </button>
                     </div>
                 </Reveal>

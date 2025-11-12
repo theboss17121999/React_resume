@@ -4,7 +4,6 @@ import { navbarAtom } from "../store/navbar/navbar";
 import { useCallback, useEffect, useRef } from "react";
 import { Header } from "./utils/Header";
 import cognizant from '../assets/educationLogo/Logo_Cognizant.png';
-
 import { Card } from '../components/utils/Card.tsx';
 import { useUpdateNavBar } from "../Hooks/useUpdateNavBar.jsx";
 
@@ -50,7 +49,7 @@ export const WorkExp = () => {
 function Work() {
     return (
         <>
-            <TimeCircle start="Start" end="DEC 2021" />
+            <TimeCircle start="Start" end="MAY 2021" />
             <LongBar />
             <div className="flex justify-center items-center">
                 <Reveal>
