@@ -18,7 +18,9 @@ import {
     SiTypescript,
     SiMysql,
     SiGnometerminal,
-    SiPostman
+    SiPostman,
+    SiPostgresql,
+    SiSpring 
 } from "react-icons/si";
 
 import { 
@@ -47,12 +49,12 @@ import { instagramLink, linkedinLink, skillArray, wantTochangeSkill } from '../d
 
   const LOGOS1 = [
     <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
-        <SiMongodb className="text-slate-800 w-16 h-16" />
-        <p className="text-center mt-2">Mongo DB</p>
+        <SiPostgresql  className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">PostGres</p>
     </div>,
     <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
-        <SiExpress className="text-slate-800 w-16 h-16" />
-        <p className="text-center mt-2">Express</p>
+        <SiSpring className="text-slate-800 w-16 h-16" />
+        <p className="text-center mt-2">SpringBoot</p>
     </div>,
     <div className='slide flex flex-col items-center justify-center w-[100px] mx-4'>
         <SiReact className="text-slate-800 w-16 h-16" />
