@@ -1,6 +1,7 @@
 import { ProjectContext } from "../context/ProjextContext";
 import project1 from '../assets/project/LapPro1.png';
 import project2 from '../assets/project/LapPro3.png';
+import project4 from '../assets/project/LapPro4.png';
 import project3 from '../assets/project/hello.png';
 import { Project } from "../components/Project";
 import { Reveal } from "../components/utils/Reveal";
@@ -63,15 +64,21 @@ function ProjectCard () {
             url :"https://github.com/theboss17121999/React_resume"
         },
         {
+            pro_name: "Make me Healthy",
+            image: project4,
+            desc: "It is used to track your daily consumption habits and provide insights into your health and wellness. By analyzing your dietary choices, exercise routines, and other lifestyle factors, it offers personalized recommendations to help you make healthier decisions and improve your overall well-being.",
+            url :"https://github.com/theboss17121999/HealthTrackerSpringBoot"
+        },
+        {
             pro_name: "Super Tic Tac Toe",
             image: project2,
-            desc: "This is a game built using the MERN stack, where two players can challenge each other in a game of Super Tic Tac Toe. It demonstrates a wide range of essential MERN skills.",
+            desc: "This is a game built using the Springboot and React stack, where two players can challenge each other in a game of Super Tic Tac Toe. It demonstrates a wide range of essential MERN skills.",
             url:"https://github.com/theboss17121999/SuperTicTacToe"
         },
         {
             pro_name: "Spending Tracker",
             image: project1,
-            desc: "It is used to track spending records and the ability to track spending on any particular items with any given date range. It helps user to control expenditure of the user.",
+            desc: "It is a Springboot application used to track spending records and the ability to track spending on any particular items with any given date range. It helps user to control expenditure of the user.",
             url :"https://github.com/theboss17121999/Spending_Tracker"
         }
     ];
