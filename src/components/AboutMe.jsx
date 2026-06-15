@@ -20,7 +20,8 @@ import {
     SiGnometerminal,
     SiPostman,
     SiPostgresql,
-    SiSpring 
+    SiSpring,
+    SiDocker
 } from "react-icons/si";
 
 import { 
@@ -84,8 +85,8 @@ const LOGOS2 = [
       <p className="text-center mt-2">JavaScript</p>
     </div>,
     <div className="slide flex flex-col items-center justify-center w-[100px] mx-4">
-      <SiTypescript className="text-slate-800 w-16 h-16" />
-      <p className="text-center mt-2">TypeScript</p>
+      <SiDocker className="text-slate-800 w-16 h-16" />
+      <p className="text-center mt-2">Docker</p>
     </div>,
     <div className="slide flex flex-col items-center justify-center w-[100px] mx-4">
       <FaPython className="text-slate-800 w-16 h-16" />
