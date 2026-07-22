@@ -7,6 +7,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { Reveal } from "./utils/Reveal";
 import { useRecoilValue } from "recoil";
 import { navbarAtomFamily } from "../store/navbar/navbarFamily";
+//hi
 
 export const NavBar = () => {
   const [isClick, setIsClick] = useState(false);
