@@ -73,7 +73,7 @@ function ProjectDetails(){
                         </div> */}
                         <a href={link} target="_blank" rel="noopener noreferrer">
                             <div className="flex gap-4">
-                                <Button className='text-white w-32 h-14 bg-purple-800 md:hover:bg-blue-600 font-bold text-lg duration-300 delay-100' variant="filled">Repository</Button>
+                                <Button className='text-white w-32 h-14 bg-purple-800 md:hover:bg-blue-600 font-bold text-sm duration-300 delay-100' variant="filled">Repository</Button>
                             </div>
                         </a>
                     </Reveal>
