@@ -63,14 +63,14 @@ function Work() {
             </div>
             <LongBar />
             {/* <TimeCircle start="" end="Current" /> */}
-            <TimeCircle start="Sep 2026" end="Present" />
+            <TimeCircle start="OCT 2026" end="Present" />
             <LongBar />
             <div className="flex justify-center items-center">
                 <Reveal>
-                    <Card title="Accenture">
+                    <Card title="Infosys">
                         <ul>
-                            <li className="pb-2 font-bold">Sr. Software Engineer</li>
-                            <li>Accenture is a leading global professional services company, providing a range of services in strategy, consulting, digital, technology, and operations.</li>
+                            <li className="pb-2 font-bold">Consultant</li>
+                            <li>Infosys is a leading global professional services company, providing a range of services in strategy, consulting, digital, technology, and operations.</li>
                         </ul>
                     </Card>
                 </Reveal>
